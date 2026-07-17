@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Telearn 演算法練習題</title>
+<meta name="description" content="各章節的補充練習題清單與教學重點">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body, {delimiters: [
+    {left: '$$', right: '$$', display: true},
+    {left: '$', right: '$', display: false}
+  ]});"></script>
+<style>
+:root {
+  --bg: #faf9f7; --panel: #ffffff; --text: #1f2328; --muted: #6a6f77;
+  --line: #e4e2dd; --accent: #2f6f4f; --accent-soft: #e8f2ec;
+  --code-bg: #f0efec;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #14161a; --panel: #1c1f24; --text: #e6e4e0; --muted: #9aa0a8;
+    --line: #2c3037; --accent: #7fc9a2; --accent-soft: #22302a;
+    --code-bg: #262a30;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; background: var(--bg); color: var(--text);
+  font-family: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", system-ui, sans-serif;
+  line-height: 1.65;
+}
+header {
+  padding: 2.2rem 1.5rem 1.6rem; border-bottom: 1px solid var(--line);
+  background: var(--panel);
+}
+header .inner { max-width: 1080px; margin: 0 auto; }
+header h1 { margin: 0 0 .3rem; font-size: 1.55rem; }
+header p { margin: 0; color: var(--muted); font-size: .95rem; }
+.layout {
+  max-width: 1080px; margin: 0 auto; display: flex; gap: 2rem;
+  padding: 1.5rem; align-items: flex-start;
+}
+nav {
+  position: sticky; top: 1rem; width: 240px; flex-shrink: 0;
+  max-height: calc(100vh - 2rem); overflow-y: auto;
+  border: 1px solid var(--line); border-radius: 10px; background: var(--panel);
+  padding: .5rem;
+}
+nav a {
+  display: flex; align-items: center; gap: .5rem; padding: .4rem .6rem;
+  border-radius: 7px; color: var(--text); text-decoration: none; font-size: .88rem;
+}
+nav a:hover { background: var(--accent-soft); }
+.nav-num { color: var(--muted); font-size: .75rem; width: 1.4em; flex-shrink: 0; }
+.count {
+  margin-left: auto; background: var(--accent-soft); color: var(--accent);
+  border-radius: 99px; font-size: .72rem; padding: 0 .55em; font-weight: 600;
+}
+main { flex: 1; min-width: 0; }
+section {
+  background: var(--panel); border: 1px solid var(--line); border-radius: 10px;
+  padding: 1.2rem 1.4rem; margin-bottom: 1.2rem; scroll-margin-top: 1rem;
+}
+h2 {
+  margin: 0 0 .8rem; font-size: 1.15rem; display: flex; align-items: baseline;
+  gap: .6rem; flex-wrap: wrap;
+}
+.ch-num { color: var(--accent); font-size: .9rem; font-weight: 700; }
+.folder { color: var(--muted); font-size: .78rem; font-weight: 400; }
+details.points {
+  margin-bottom: .9rem; border: 1px solid var(--line); border-radius: 8px;
+  padding: .5rem .9rem; background: var(--bg);
+}
+details.points summary {
+  cursor: pointer; font-size: .88rem; color: var(--muted); user-select: none;
+}
+details.points ul { margin: .5rem 0 .3rem; padding-left: 1.3rem; font-size: .9rem; }
+details.points li { margin-bottom: .3rem; }
+code {
+  background: var(--code-bg); border-radius: 5px; padding: .1em .35em;
+  font-size: .85em; font-family: ui-monospace, "SF Mono", Menlo, monospace;
+}
+.table-wrap { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; font-size: .92rem; }
+th, td { text-align: left; padding: .45rem .7rem; border-bottom: 1px solid var(--line); }
+th { color: var(--muted); font-weight: 600; font-size: .82rem; }
+tr:last-child td { border-bottom: none; }
+td.idx { color: var(--muted); width: 2.5em; }
+a { color: var(--accent); }
+.empty { color: var(--muted); font-size: .9rem; margin: .2rem 0; }
+footer {
+  text-align: center; color: var(--muted); font-size: .8rem;
+  padding: 1rem 0 2.5rem;
+}
+@media (max-width: 760px) {
+  .layout { flex-direction: column; }
+  nav { position: static; width: 100%; max-height: none; }
+}
+</style>
+</head>
+<body>
+<header><div class="inner">
+  <h1>Telearn 演算法練習題</h1>
+  <p>各章節的補充練習題清單與教學重點・共 14 題</p>
+</div></header>
+<div class="layout">
+<nav>
+<a href="#ch01"><span class="nav-num">01</span>基礎與時間複雜度<span class="count">5</span></a>
+<a href="#ch02"><span class="nav-num">02</span>前綴和與差分<span class="count">9</span></a>
+<a href="#ch03"><span class="nav-num">03</span>排序</a>
+<a href="#ch04"><span class="nav-num">04</span>二分搜尋</a>
+<a href="#ch05"><span class="nav-num">05</span>雙指針與滑動視窗</a>
+<a href="#ch06"><span class="nav-num">06</span>遞迴與分治</a>
+<a href="#ch07"><span class="nav-num">07</span>回溯法</a>
+<a href="#ch08"><span class="nav-num">08</span>貪心法</a>
+<a href="#ch09"><span class="nav-num">09</span>動態規劃</a>
+<a href="#ch10"><span class="nav-num">10</span>堆疊與佇列</a>
+<a href="#ch11"><span class="nav-num">11</span>堆積與優先佇列</a>
+<a href="#ch12"><span class="nav-num">12</span>並查集</a>
+<a href="#ch13"><span class="nav-num">13</span>樹</a>
+<a href="#ch14"><span class="nav-num">14</span>圖的走訪（BFS / DFS）</a>
+<a href="#ch15"><span class="nav-num">15</span>最短路徑</a>
+<a href="#ch16"><span class="nav-num">16</span>最小生成樹</a>
+<a href="#ch17"><span class="nav-num">17</span>拓撲排序</a>
+<a href="#ch18"><span class="nav-num">18</span>線段樹與樹狀陣列</a>
+<a href="#ch19"><span class="nav-num">19</span>字串演算法</a>
+<a href="#ch20"><span class="nav-num">20</span>數論與數學</a>
+<a href="#ch21"><span class="nav-num">21</span>位元運算</a>
+<a href="#ch22"><span class="nav-num">22</span>計算幾何</a>
+</nav>
+<main>
+<section id="ch01"><h2><span class="ch-num">01</span>基礎與時間複雜度<span class="folder">Basics_Complexity</span></h2><details class="points"><summary>教學重點</summary><ul><li>Big-O 記號與常見複雜度階層</li>
+<li>由測資範圍反推可接受的演算法複雜度</li>
+<li>基本輸入輸出與常數優化</li></ul></details><div class="table-wrap"><table><thead><tr><th>#</th><th>題目</th><th>來源</th></tr></thead><tbody><tr><td class="idx">1</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=d267" target="_blank" rel="noopener">d267. 11577 - Letter Frequency</a></td><td>ZeroJudge</td></tr>
+<tr><td class="idx">2</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=d660" target="_blank" rel="noopener">d660. 11764 - Jumping Mario</a></td><td>ZeroJudge</td></tr>
+<tr><td class="idx">3</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=e611" target="_blank" rel="noopener">e611. 11661 - Burger Time</a></td><td>ZeroJudge</td></tr>
+<tr><td class="idx">4</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=e533" target="_blank" rel="noopener">e533. 11942 - Lumberjack Sequencing</a></td><td>ZeroJudge</td></tr>
+<tr><td class="idx">5</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=a159" target="_blank" rel="noopener">a159. 11743 - Credit Check</a></td><td>ZeroJudge</td></tr></tbody></table></div></section>
+<section id="ch02"><h2><span class="ch-num">02</span>前綴和與差分<span class="folder">PrefixSum</span></h2><details class="points"><summary>教學重點</summary><ul><li>一維前綴和：區間和查詢 $O(1)$</li>
+<li>差分陣列：區間修改 $O(1)$，最後前綴和還原（前綴和的反向操作）</li>
+<li>二維前綴和與二維差分：容斥建表、四角修改</li>
+<li>計數前綴：把「符合條件記 1」化為區間統計</li>
+<li>前綴和 + 雜湊表：處理「區間和等於 K」類問題（負數使滑動視窗失效）</li></ul></details><div class="table-wrap"><table><thead><tr><th>#</th><th>題目</th><th>來源</th></tr></thead><tbody><tr><td class="idx">1</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=e339" target="_blank" rel="noopener">e339. 前綴和練習</a></td><td>ZeroJudge</td></tr>
+<tr><td class="idx">2</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=e346" target="_blank" rel="noopener">e346. 區間和練習</a></td><td>ZeroJudge</td></tr>
+<tr><td class="idx">3</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=d563" target="_blank" rel="noopener">d563. 等值首尾和</a></td><td>ZeroJudge</td></tr>
+<tr><td class="idx">4</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=a693" target="_blank" rel="noopener">a693. 吞食天地</a></td><td>ZeroJudge</td></tr>
+<tr><td class="idx">5</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=a694" target="_blank" rel="noopener">a694. 吞食天地二</a></td><td>ZeroJudge</td></tr>
+<tr><td class="idx">6</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=d206" target="_blank" rel="noopener">d206. 00108 - Maximum Sum</a></td><td>ZeroJudge</td></tr>
+<tr><td class="idx">7</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=e340" target="_blank" rel="noopener">e340. 差分練習</a></td><td>ZeroJudge</td></tr>
+<tr><td class="idx">8</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=g597" target="_blank" rel="noopener">g597. 3. 生產線</a></td><td>ZeroJudge</td></tr>
+<tr><td class="idx">9</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=n565" target="_blank" rel="noopener">n565. 降雨量統計 (Rainfall)</a></td><td>ZeroJudge</td></tr></tbody></table></div></section>
+<section id="ch03"><h2><span class="ch-num">03</span>排序<span class="folder">Sorting</span></h2><details class="points"><summary>教學重點</summary><ul><li>比較排序：$O(n \log n)$ 演算法與 $O(n^2)$ 的差距</li>
+<li><strong>多鍵排序與穩定性</strong>：複合鍵 vs 兩次穩定排序</li>
+<li><strong>非比較排序</strong>：值域小時計數排序突破 $\Omega(n \log n)$ 下界</li>
+<li><strong>排序是預處理</strong>：資料排好後很多問題變線性掃描</li>
+<li><strong>排序的結構</strong>：逆序數對、置換的環分解</li></ul></details><p class="empty">此章節的練習題整理中，敬請期待。</p></section>
+<section id="ch04"><h2><span class="ch-num">04</span>二分搜尋<span class="folder">BinarySearch</span></h2><details class="points"><summary>教學重點</summary><ul><li>有序陣列上的二分：lower_bound / upper_bound、迴圈不變量與 off-by-one</li>
+<li>二分的本質：不需要「整個陣列有序」，只需要「判斷式能告訴你答案在哪半邊」</li>
+<li><strong>對答案二分</strong>：答案本身具單調性時，寫判定函式 <code>check()</code> 二分答案</li>
+<li><strong>值域二分</strong>：第 K 小問題——「≤ v 有幾個」好算，就對值二分</li></ul></details><p class="empty">此章節的練習題整理中，敬請期待。</p></section>
+<section id="ch05"><h2><span class="ch-num">05</span>雙指針與滑動視窗<span class="folder">TwoPointers_SlidingWindow</span></h2><details class="points"><summary>教學重點</summary><ul><li><strong>對向雙指針</strong>：兩指針從兩端相向而行，每步淘汰一個元素——找配對，也能「從兩端確定答案」</li>
+<li><strong>同向雙指針（滑動視窗）</strong>：固定長度視窗的 $O(1)$ 增量更新；可變長度視窗的「單調性讓左指針不回頭」</li>
+<li><strong>視窗內狀態的維護</strong>：從一個總和，到雜湊計數表（種類數）</li>
+<li>四種問法一次看齊：求最長、求最短、數數量、求總量</li></ul></details><p class="empty">此章節的練習題整理中，敬請期待。</p></section>
+<section id="ch06"><h2><span class="ch-num">06</span>遞迴與分治<span class="folder">Recursion_DivideAndConquer</span></h2><details class="points"><summary>教學重點</summary><ul><li>遞迴三檢查點：<strong>終止條件、問題有變小、相信遞迴會把小問題做好</strong></li>
+<li>分治三步驟：分割、解決、<strong>合併（別忘了跨界的解）</strong></li>
+<li>Master Theorem 概念：$T(n) = 2T(n/2) + O(n) = O(n \log n)$、$T(n) = T(n/2) + O(1) = O(\log n)$</li>
+<li>遞迴的多張臉：切一半、砍指數、跟著巢狀結構走、自相似結構</li></ul></details><p class="empty">此章節的練習題整理中，敬請期待。</p></section>
+<section id="ch07"><h2><span class="ch-num">07</span>回溯法<span class="folder">Backtracking</span></h2><details class="points"><summary>教學重點</summary><ul><li>狀態空間樹：把「所有可能」畫成一棵遞迴樹，暴力搜尋 = 走完整棵樹</li>
+<li>回溯三步驟：<strong>做選擇 → 遞迴 → 撤銷選擇</strong>（狀態還原）</li>
+<li>排列、組合、子集枚舉的標準骨架（<code>start</code> 參數 vs <code>used[]</code> 陣列）</li>
+<li>四種剪枝，由弱到強：</li></ul></details><p class="empty">此章節的練習題整理中，敬請期待。</p></section>
+<section id="ch08"><h2><span class="ch-num">08</span>貪心法<span class="folder">Greedy</span></h2><details class="points"><summary>教學重點</summary><ul><li>貪心選擇性質與最優子結構：每步做局部最佳選擇，仍能得到全域最佳</li>
+<li><strong>交換論證（exchange argument）</strong>：假設最佳解不長這樣，做一次局部交換讓它不變差——本章每題都用它證明</li>
+<li>常見模型：排序配對、排程順序、區間排程、區間覆蓋、自訂比較排序</li>
+<li>貪心會錯的時候：找零錢（非標準幣制）、0/1 背包——對照 <a href="../DynamicProgramming/" target="_blank" rel="noopener">DynamicProgramming</a> 章</li></ul></details><p class="empty">此章節的練習題整理中，敬請期待。</p></section>
+<section id="ch09"><h2><span class="ch-num">09</span>動態規劃<span class="folder">DynamicProgramming</span></h2><details class="points"><summary>教學重點</summary><ul><li>狀態定義與轉移方程</li>
+<li>Top-down 記憶化 vs Bottom-up 迭代</li>
+<li>滾動陣列與空間優化</li>
+<li>經典模型：一維 DP、背包 DP、序列/字串 DP、網格 DP、區間 DP、狀態機 DP</li></ul></details><p class="empty">此章節的練習題整理中，敬請期待。</p></section>
+<section id="ch10"><h2><span class="ch-num">10</span>堆疊與佇列<span class="folder">Stack_Queue</span></h2><details class="points"><summary>教學重點</summary><ul><li>堆疊（LIFO）與佇列（FIFO）的基本操作與適用場景</li>
+<li>堆疊經典應用：括號匹配、表達式求值</li>
+<li>佇列經典應用：輪流模擬（約瑟夫問題）</li>
+<li><strong>單調堆疊</strong>：幫每個元素找「左右第一個打破單調性的位置」，攤還 $O(n)$</li>
+<li><strong>單調雙端佇列</strong>：滑動視窗最值，隊首出、隊尾也出</li></ul></details><p class="empty">此章節的練習題整理中，敬請期待。</p></section>
+<section id="ch11"><h2><span class="ch-num">11</span>堆積與優先佇列<span class="folder">Heap_PriorityQueue</span></h2><details class="points"><summary>教學重點</summary><ul><li>二元堆積的性質與操作：上浮／下沉、$O(\log n)$ 插入與取極值、$O(n)$ 建堆</li>
+<li>堆的使用場景：<strong>候選集合一邊變動、一邊要反覆取極值</strong>——這是排序做不到的</li>
+<li>常見模式：tie-break 編進比較鍵、固定大小堆做 Top-K、雙堆對夾、資源池、反悔貪心</li>
+<li>Python <code>heapq</code> 只有最小堆（最大堆存負值）；C++ <code>priority_queue</code> 預設最大堆（<code>greater&lt;&gt;</code> 轉最小）</li></ul></details><p class="empty">此章節的練習題整理中，敬請期待。</p></section>
+<section id="ch12"><h2><span class="ch-num">12</span>並查集<span class="folder">DisjointSet</span></h2><details class="points"><summary>教學重點</summary><ul><li>Find / Union 操作、路徑壓縮與按大小（按秩）合併</li>
+<li>連通性判斷與元件數維護</li>
+<li>集合附加資訊：size 隨合併累加</li>
+<li>依權重排序加邊：Kruskal 的骨架（銜接 <a href="../MinimumSpanningTree/" target="_blank" rel="noopener">MinimumSpanningTree</a> 章）</li>
+<li><strong>種類並查集（擴展域）</strong>：用 $x$ 與 $x+N$ 表達「敵對」關係</li></ul></details><p class="empty">此章節的練習題整理中，敬請期待。</p></section>
+<section id="ch13"><h2><span class="ch-num">13</span>樹<span class="folder">Tree</span></h2><details class="points"><summary>教學重點</summary><ul><li>樹的表示法（父指標／子串列）與走訪（前中後序、BFS 層序）</li>
+<li>「先兒後父」的計算順序：BFS 序反向掃 = 免遞迴的後序（深鏈不爆堆疊）</li>
+<li>兩次走訪求直徑；由走訪序重建樹</li>
+<li>LCA 倍增（binary lifting）</li>
+<li>樹上 DP：狀態 = (節點, 自身選擇)</li></ul></details><p class="empty">此章節的練習題整理中，敬請期待。</p></section>
+<section id="ch14"><h2><span class="ch-num">14</span>圖的走訪（BFS / DFS）<span class="folder">Graph_BFS_DFS</span></h2><details class="points"><summary>教學重點</summary><ul><li>鄰接串列表示法、DFS 與 BFS 的實作與差異（堆疊 vs 佇列）</li>
+<li>走訪順序與 visited 標記：每個節點只走一次，$O(V+E)$</li>
+<li>網格圖走訪與 Flood Fill（含「從邊界逆向出發」的思考方式）</li>
+<li>多源 BFS：多個起點同時入隊，分層數 = 距離／時間</li>
+<li>圖染色與二分圖判定（奇環）</li>
+<li>隱式圖：把「狀態」當節點、即時產生鄰居做 BFS</li></ul></details><p class="empty">此章節的練習題整理中，敬請期待。</p></section>
+<section id="ch15"><h2><span class="ch-num">15</span>最短路徑<span class="folder">ShortestPath</span></h2><details class="points"><summary>教學重點</summary><ul><li>Dijkstra（含優先佇列實作）</li>
+<li>Bellman-Ford 與負邊、負環偵測</li>
+<li>Floyd-Warshall 全點對最短路，及其「換運算」變化：傳遞閉包 $(\lor, \land)$、瓶頸路徑 $(\max, \min)$</li>
+<li>路徑回溯：parent 陣列（往回走）vs next 矩陣（往前走）</li>
+<li>變化題思路：指定中繼點（最短路可拼接）、邊數限制（狀態加一維）</li></ul></details><p class="empty">此章節的練習題整理中，敬請期待。</p></section>
+<section id="ch16"><h2><span class="ch-num">16</span>最小生成樹<span class="folder">MinimumSpanningTree</span></h2><details class="points"><summary>教學重點</summary><ul><li><strong>Kruskal</strong>：邊排序＋並查集，$O(M \log M)$，稀疏圖首選（前置：DisjointSet 主題）</li>
+<li><strong>Prim</strong>：維護「點到樹的最短距離」，$O(N^2)$ 版本是稠密圖首選；與 Dijkstra 對照記憶</li>
+<li><strong>MST 的性質</strong>：cut property（貪心不後悔的理由）、瓶頸性質（同時最小化最大邊）</li>
+<li><strong>建模</strong>：互補轉化（最多拆 = 總和 − 最少留）、虛擬源點（「自立選項」變成邊）</li></ul></details><p class="empty">此章節的練習題整理中，敬請期待。</p></section>
+<section id="ch17"><h2><span class="ch-num">17</span>拓撲排序<span class="folder">TopologicalSort</span></h2><details class="points"><summary>教學重點</summary><ul><li>DAG 與拓撲序：「先後約束」的圖模型</li>
+<li>Kahn 演算法（BFS + 入度表）；DFS 三色標記為另一解法</li>
+<li>環偵測：完成數 &lt; N 即有環</li>
+<li>唯一化輸出：用最小堆取字典序最小拓撲序</li>
+<li><strong>DAG 上的 DP</strong>：拓撲序 = DP 的計算順序（max 求關鍵路徑、sum 求路線計數）</li></ul></details><p class="empty">此章節的練習題整理中，敬請期待。</p></section>
+<section id="ch18"><h2><span class="ch-num">18</span>線段樹與樹狀陣列<span class="folder">SegmentTree_BIT</span></h2><details class="points"><summary>教學重點</summary><ul><li><strong>樹狀陣列 (BIT / Fenwick)</strong>：<code>lowbit</code> 拆段，單點改＋前綴查各 $O(\log N)$，碼短常數小</li>
+<li><strong>差分技巧</strong>：把「區間改」壓成端點的「單點改」——BIT 的能力邊界靠它擴張</li>
+<li><strong>值域 BIT ＋離散化</strong>：把「數逆序對」變成「值域上的前綴計數」</li>
+<li><strong>線段樹 (segment tree)</strong>：節點存可合併資訊（min／max／和／GCD…），區間查詢＋單點改</li>
+<li><strong>懶標記 (lazy propagation)</strong>：區間改暫存在高層節點，用到才下推——「區間改＋區間查」的通用框架</li>
+<li>選擇心法：<strong>查詢可前綴相減（和、計數）→ BIT；不可相減（min／max）或需區間改區間查 → 線段樹</strong></li></ul></details><p class="empty">此章節的練習題整理中，敬請期待。</p></section>
+<section id="ch19"><h2><span class="ch-num">19</span>字串演算法<span class="folder">String</span></h2><details class="points"><summary>教學重點</summary><ul><li>Trie 字典樹：按前綴組織字串，查詢與字典大小無關</li>
+<li>KMP：fail 函數描述字串的<strong>自我重疊結構</strong>——匹配與週期都靠它</li>
+<li>Z-algorithm：每個位置與開頭的最長重合，「最右匹配區間」的繼承＋延伸</li>
+<li>Manacher：線性求所有中心的最長迴文，攤銷論證同單調堆疊</li>
+<li>String Hashing：把「字串相等」變「數字相等」，$O(1)$ 比任意兩段；機率性工具，要會算碰撞機率</li>
+<li>共同主題：避免「從頭再比」——已比對過的部分自帶資訊</li></ul></details><p class="empty">此章節的練習題整理中，敬請期待。</p></section>
+<section id="ch20"><h2><span class="ch-num">20</span>數論與數學<span class="folder">NumberTheory_Math</span></h2><details class="points"><summary>教學重點</summary><ul><li>質數判定與埃氏篩</li>
+<li>GCD / LCM、擴展歐幾里得</li>
+<li>模運算、快速冪、模反元素</li></ul></details><p class="empty">此章節的練習題整理中，敬請期待。</p></section>
+<section id="ch21"><h2><span class="ch-num">21</span>位元運算<span class="folder">BitManipulation</span></h2><details class="points"><summary>教學重點</summary><ul><li>AND / OR / XOR / 位移的性質</li>
+<li>常用技巧：lowbit、位元枚舉子集</li>
+<li>位元遮罩狀態壓縮</li></ul></details><p class="empty">此章節的練習題整理中，敬請期待。</p></section>
+<section id="ch22"><h2><span class="ch-num">22</span>計算幾何<span class="folder">Geometry</span></h2><details class="points"><summary>教學重點</summary><ul><li><strong>整數運算優先</strong>：判定與面積都避開浮點——輸出 2A、距離平方、叉積正負</li>
+<li><strong>叉積</strong>是整章的基石：轉向判斷、有向面積、凸性檢查</li>
+<li>鞋帶公式（多邊形面積）、線段相交（跨立實驗）、凸包（Andrew 單調鏈）、最近點對（分治）</li>
+<li>溢位意識：座標 $10^9$ 時叉積達 $8 \times 10^{18}$，逼近 64 位元上限</li></ul></details><p class="empty">此章節的練習題整理中，敬請期待。</p></section>
+</main>
+</div>
+<footer>本頁由題庫自動產生，最後更新見 repo 提交紀錄。</footer>
+</body>
+</html>
