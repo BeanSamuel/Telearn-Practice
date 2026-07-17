@@ -110,14 +110,14 @@ footer {
 <body>
 <header><div class="inner">
   <h1>Telearn 演算法練習題</h1>
-  <p>各章節的補充練習題清單與教學重點・共 19 題</p>
+  <p>各章節的補充練習題清單與教學重點・共 34 題</p>
 </div></header>
 <div class="layout">
 <nav>
 <a href="#ch01"><span class="nav-num">01</span>基礎與時間複雜度<span class="count">5</span></a>
 <a href="#ch02"><span class="nav-num">02</span>前綴和與差分<span class="count">9</span></a>
 <a href="#ch03"><span class="nav-num">03</span>排序<span class="count">5</span></a>
-<a href="#ch04"><span class="nav-num">04</span>二分搜尋</a>
+<a href="#ch04"><span class="nav-num">04</span>二分搜尋<span class="count">15</span></a>
 <a href="#ch05"><span class="nav-num">05</span>雙指針與滑動視窗</a>
 <a href="#ch06"><span class="nav-num">06</span>遞迴與分治</a>
 <a href="#ch07"><span class="nav-num">07</span>回溯法</a>
@@ -162,7 +162,7 @@ footer {
 <li><strong>多鍵排序與穩定性</strong>：複合鍵 vs 兩次穩定排序</li>
 <li><strong>非比較排序</strong>：值域小時計數排序突破 $\Omega(n \log n)$ 下界</li>
 <li><strong>排序是預處理</strong>：資料排好後很多問題變線性掃描</li>
-<li><strong>排序的結構</strong>：逆序數對、置換的環分解</li></ul></details><div class="table-wrap"><table><thead><tr><th>#</th><th>題目</th><th>來源</th><th>解答</th></tr></thead><tbody><tr><td class="idx">1</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=a233" target="_blank" rel="noopener">a233. 排序法~~~ 挑戰極限</a></td><td>ZeroJudge</td><td class="nosol">—</td></tr>
+<li><strong>排序的結構</strong>：逆序數對、置換的環分解</li></ul></details><div class="table-wrap"><table><thead><tr><th>#</th><th>題目</th><th>來源</th><th>解答</th></tr></thead><tbody><tr><td class="idx">1</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=a233" target="_blank" rel="noopener">a233. 排序法~~~ 挑戰極限</a></td><td>ZeroJudge</td><td><a class="sol" href="https://github.com/BeanSamuel/cpp_practice/blob/main/zerojudge/a233.cpp" target="_blank" rel="noopener">解答</a></td></tr>
 <tr><td class="idx">2</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=k605" target="_blank" rel="noopener">k605. 班級成績單</a></td><td>ZeroJudge</td><td class="nosol">—</td></tr>
 <tr><td class="idx">3</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=a915" target="_blank" rel="noopener">a915. 二维点排序</a></td><td>ZeroJudge</td><td class="nosol">—</td></tr>
 <tr><td class="idx">4</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=d190" target="_blank" rel="noopener">d190. 11462 - Age Sort</a></td><td>ZeroJudge</td><td class="nosol">—</td></tr>
@@ -170,7 +170,21 @@ footer {
 <section id="ch04"><h2><span class="ch-num">04</span>二分搜尋<span class="folder">BinarySearch</span></h2><details class="points"><summary>教學重點</summary><ul><li>有序陣列上的二分：lower_bound / upper_bound、迴圈不變量與 off-by-one</li>
 <li>二分的本質：不需要「整個陣列有序」，只需要「判斷式能告訴你答案在哪半邊」</li>
 <li><strong>對答案二分</strong>：答案本身具單調性時，寫判定函式 <code>check()</code> 二分答案</li>
-<li><strong>值域二分</strong>：第 K 小問題——「≤ v 有幾個」好算，就對值二分</li></ul></details><p class="empty">此章節的練習題整理中，敬請期待。</p></section>
+<li><strong>值域二分</strong>：第 K 小問題——「≤ v 有幾個」好算，就對值二分</li></ul></details><div class="table-wrap"><table><thead><tr><th>#</th><th>題目</th><th>來源</th><th>解答</th></tr></thead><tbody><tr><td class="idx">1</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=d732" target="_blank" rel="noopener">d732. 二分搜尋法</a></td><td>ZeroJudge</td><td class="nosol">—</td></tr>
+<tr><td class="idx">2</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=f679" target="_blank" rel="noopener">f679. 公會成員</a></td><td>ZeroJudge</td><td class="nosol">—</td></tr>
+<tr><td class="idx">3</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=c575" target="_blank" rel="noopener">c575. APCS 2017-0304-4基地台</a></td><td>ZeroJudge</td><td class="nosol">—</td></tr>
+<tr><td class="idx">4</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=f815" target="_blank" rel="noopener">f815. TOI_y21m4_a01遊戲升等</a></td><td>ZeroJudge</td><td class="nosol">—</td></tr>
+<tr><td class="idx">5</td><td><a href="https://cses.fi/problemset/task/3306" target="_blank" rel="noopener">Nearest Campsites I</a></td><td>CSES</td><td class="nosol">—</td></tr>
+<tr><td class="idx">6</td><td><a href="https://cses.fi/problemset/task/3307" target="_blank" rel="noopener">Nearest Campsites II</a></td><td>CSES</td><td class="nosol">—</td></tr>
+<tr><td class="idx">7</td><td><a href="https://cses.fi/problemset/task/1620" target="_blank" rel="noopener">Factory Machines</a></td><td>CSES</td><td><a class="sol" href="https://github.com/BeanSamuel/cpp_practice/blob/main/CSES/Sorting_and_Searching/Factory_Machines.cpp" target="_blank" rel="noopener">解答</a></td></tr>
+<tr><td class="idx">8</td><td><a href="https://cses.fi/problemset/task/1085" target="_blank" rel="noopener">Array Division</a></td><td>CSES</td><td><a class="sol" href="https://github.com/BeanSamuel/cpp_practice/blob/main/CSES/Sorting_and_Searching/Array_Division.cpp" target="_blank" rel="noopener">解答</a></td></tr>
+<tr><td class="idx">9</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=f581" target="_blank" rel="noopener">f581. 3. 圓環出口</a></td><td>ZeroJudge</td><td><a class="sol" href="https://github.com/BeanSamuel/cpp_practice/blob/main/zerojudge/f581.cpp" target="_blank" rel="noopener">解答</a></td></tr>
+<tr><td class="idx">10</td><td><a href="https://cses.fi/problemset/task/2422" target="_blank" rel="noopener">Multiplication Table</a></td><td>CSES</td><td class="nosol">—</td></tr>
+<tr><td class="idx">11</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=j608" target="_blank" rel="noopener">j608. 4. 機器出租</a></td><td>ZeroJudge</td><td class="nosol">—</td></tr>
+<tr><td class="idx">12</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=f607" target="_blank" rel="noopener">f607. 3. 切割費用</a></td><td>ZeroJudge</td><td class="nosol">—</td></tr>
+<tr><td class="idx">13</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=j125" target="_blank" rel="noopener">j125. 4. 蓋步道</a></td><td>ZeroJudge</td><td class="nosol">—</td></tr>
+<tr><td class="idx">14</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=o079" target="_blank" rel="noopener">o079. 4. 最佳選擇</a></td><td>ZeroJudge</td><td class="nosol">—</td></tr>
+<tr><td class="idx">15</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=o714" target="_blank" rel="noopener">o714. 4. 搭到終點</a></td><td>ZeroJudge</td><td><a class="sol" href="https://github.com/BeanSamuel/cpp_practice/blob/main/zerojudge/o714.cpp" target="_blank" rel="noopener">解答</a></td></tr></tbody></table></div></section>
 <section id="ch05"><h2><span class="ch-num">05</span>雙指針與滑動視窗<span class="folder">TwoPointers_SlidingWindow</span></h2><details class="points"><summary>教學重點</summary><ul><li><strong>對向雙指針</strong>：兩指針從兩端相向而行，每步淘汰一個元素——找配對，也能「從兩端確定答案」</li>
 <li><strong>同向雙指針（滑動視窗）</strong>：固定長度視窗的 $O(1)$ 增量更新；可變長度視窗的「單調性讓左指針不回頭」</li>
 <li><strong>視窗內狀態的維護</strong>：從一個總和，到雜湊計數表（種類數）</li>
