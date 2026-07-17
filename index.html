@@ -89,6 +89,13 @@ th { color: var(--muted); font-weight: 600; font-size: .82rem; }
 tr:last-child td { border-bottom: none; }
 td.idx { color: var(--muted); width: 2.5em; }
 a { color: var(--accent); }
+a.sol {
+  display: inline-block; background: var(--accent-soft); color: var(--accent);
+  border-radius: 6px; padding: 0 .55em; font-size: .82rem; font-weight: 600;
+  text-decoration: none;
+}
+a.sol:hover { filter: brightness(.95); }
+.nosol { color: var(--muted); }
 .empty { color: var(--muted); font-size: .9rem; margin: .2rem 0; }
 footer {
   text-align: center; color: var(--muted); font-size: .8rem;
@@ -133,33 +140,33 @@ footer {
 <main>
 <section id="ch01"><h2><span class="ch-num">01</span>基礎與時間複雜度<span class="folder">Basics_Complexity</span></h2><details class="points"><summary>教學重點</summary><ul><li>Big-O 記號與常見複雜度階層</li>
 <li>由測資範圍反推可接受的演算法複雜度</li>
-<li>基本輸入輸出與常數優化</li></ul></details><div class="table-wrap"><table><thead><tr><th>#</th><th>題目</th><th>來源</th></tr></thead><tbody><tr><td class="idx">1</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=d267" target="_blank" rel="noopener">d267. 11577 - Letter Frequency</a></td><td>ZeroJudge</td></tr>
-<tr><td class="idx">2</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=d660" target="_blank" rel="noopener">d660. 11764 - Jumping Mario</a></td><td>ZeroJudge</td></tr>
-<tr><td class="idx">3</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=e611" target="_blank" rel="noopener">e611. 11661 - Burger Time</a></td><td>ZeroJudge</td></tr>
-<tr><td class="idx">4</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=e533" target="_blank" rel="noopener">e533. 11942 - Lumberjack Sequencing</a></td><td>ZeroJudge</td></tr>
-<tr><td class="idx">5</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=a159" target="_blank" rel="noopener">a159. 11743 - Credit Check</a></td><td>ZeroJudge</td></tr></tbody></table></div></section>
+<li>基本輸入輸出與常數優化</li></ul></details><div class="table-wrap"><table><thead><tr><th>#</th><th>題目</th><th>來源</th><th>解答</th></tr></thead><tbody><tr><td class="idx">1</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=d267" target="_blank" rel="noopener">d267. 11577 - Letter Frequency</a></td><td>ZeroJudge</td><td><a class="sol" href="https://github.com/BeanSamuel/cpp_practice/blob/main/zerojudge/d267.cpp" target="_blank" rel="noopener">解答</a></td></tr>
+<tr><td class="idx">2</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=d660" target="_blank" rel="noopener">d660. 11764 - Jumping Mario</a></td><td>ZeroJudge</td><td><a class="sol" href="https://github.com/BeanSamuel/cpp_practice/blob/main/zerojudge/d660.cpp" target="_blank" rel="noopener">解答</a></td></tr>
+<tr><td class="idx">3</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=e611" target="_blank" rel="noopener">e611. 11661 - Burger Time</a></td><td>ZeroJudge</td><td><a class="sol" href="https://github.com/BeanSamuel/cpp_practice/blob/main/zerojudge/e611.cpp" target="_blank" rel="noopener">解答</a></td></tr>
+<tr><td class="idx">4</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=e533" target="_blank" rel="noopener">e533. 11942 - Lumberjack Sequencing</a></td><td>ZeroJudge</td><td><a class="sol" href="https://github.com/BeanSamuel/cpp_practice/blob/main/zerojudge/e533.cpp" target="_blank" rel="noopener">解答</a></td></tr>
+<tr><td class="idx">5</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=a159" target="_blank" rel="noopener">a159. 11743 - Credit Check</a></td><td>ZeroJudge</td><td><a class="sol" href="https://github.com/BeanSamuel/cpp_practice/blob/main/zerojudge/a159.cpp" target="_blank" rel="noopener">解答</a></td></tr></tbody></table></div></section>
 <section id="ch02"><h2><span class="ch-num">02</span>前綴和與差分<span class="folder">PrefixSum</span></h2><details class="points"><summary>教學重點</summary><ul><li>一維前綴和：區間和查詢 $O(1)$</li>
 <li>差分陣列：區間修改 $O(1)$，最後前綴和還原（前綴和的反向操作）</li>
 <li>二維前綴和與二維差分：容斥建表、四角修改</li>
 <li>計數前綴：把「符合條件記 1」化為區間統計</li>
-<li>前綴和 + 雜湊表：處理「區間和等於 K」類問題（負數使滑動視窗失效）</li></ul></details><div class="table-wrap"><table><thead><tr><th>#</th><th>題目</th><th>來源</th></tr></thead><tbody><tr><td class="idx">1</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=e339" target="_blank" rel="noopener">e339. 前綴和練習</a></td><td>ZeroJudge</td></tr>
-<tr><td class="idx">2</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=e346" target="_blank" rel="noopener">e346. 區間和練習</a></td><td>ZeroJudge</td></tr>
-<tr><td class="idx">3</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=d563" target="_blank" rel="noopener">d563. 等值首尾和</a></td><td>ZeroJudge</td></tr>
-<tr><td class="idx">4</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=a693" target="_blank" rel="noopener">a693. 吞食天地</a></td><td>ZeroJudge</td></tr>
-<tr><td class="idx">5</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=a694" target="_blank" rel="noopener">a694. 吞食天地二</a></td><td>ZeroJudge</td></tr>
-<tr><td class="idx">6</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=d206" target="_blank" rel="noopener">d206. 00108 - Maximum Sum</a></td><td>ZeroJudge</td></tr>
-<tr><td class="idx">7</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=e340" target="_blank" rel="noopener">e340. 差分練習</a></td><td>ZeroJudge</td></tr>
-<tr><td class="idx">8</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=g597" target="_blank" rel="noopener">g597. 3. 生產線</a></td><td>ZeroJudge</td></tr>
-<tr><td class="idx">9</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=n565" target="_blank" rel="noopener">n565. 降雨量統計 (Rainfall)</a></td><td>ZeroJudge</td></tr></tbody></table></div></section>
+<li>前綴和 + 雜湊表：處理「區間和等於 K」類問題（負數使滑動視窗失效）</li></ul></details><div class="table-wrap"><table><thead><tr><th>#</th><th>題目</th><th>來源</th><th>解答</th></tr></thead><tbody><tr><td class="idx">1</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=e339" target="_blank" rel="noopener">e339. 前綴和練習</a></td><td>ZeroJudge</td><td><a class="sol" href="https://github.com/BeanSamuel/cpp_practice/blob/main/zerojudge/e339.cpp" target="_blank" rel="noopener">解答</a></td></tr>
+<tr><td class="idx">2</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=e346" target="_blank" rel="noopener">e346. 區間和練習</a></td><td>ZeroJudge</td><td><a class="sol" href="https://github.com/BeanSamuel/cpp_practice/blob/main/zerojudge/e346.cpp" target="_blank" rel="noopener">解答</a></td></tr>
+<tr><td class="idx">3</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=d563" target="_blank" rel="noopener">d563. 等值首尾和</a></td><td>ZeroJudge</td><td><a class="sol" href="https://github.com/BeanSamuel/cpp_practice/blob/main/zerojudge/d563.cpp" target="_blank" rel="noopener">解答</a></td></tr>
+<tr><td class="idx">4</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=a693" target="_blank" rel="noopener">a693. 吞食天地</a></td><td>ZeroJudge</td><td><a class="sol" href="https://github.com/BeanSamuel/cpp_practice/blob/main/zerojudge/a693.cpp" target="_blank" rel="noopener">解答</a></td></tr>
+<tr><td class="idx">5</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=a694" target="_blank" rel="noopener">a694. 吞食天地二</a></td><td>ZeroJudge</td><td><a class="sol" href="https://github.com/BeanSamuel/cpp_practice/blob/main/zerojudge/a694.cpp" target="_blank" rel="noopener">解答</a></td></tr>
+<tr><td class="idx">6</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=d206" target="_blank" rel="noopener">d206. 00108 - Maximum Sum</a></td><td>ZeroJudge</td><td><a class="sol" href="https://github.com/BeanSamuel/cpp_practice/blob/main/zerojudge/d206.cpp" target="_blank" rel="noopener">解答</a></td></tr>
+<tr><td class="idx">7</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=e340" target="_blank" rel="noopener">e340. 差分練習</a></td><td>ZeroJudge</td><td><a class="sol" href="https://github.com/BeanSamuel/cpp_practice/blob/main/zerojudge/e340.cpp" target="_blank" rel="noopener">解答</a></td></tr>
+<tr><td class="idx">8</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=g597" target="_blank" rel="noopener">g597. 3. 生產線</a></td><td>ZeroJudge</td><td><a class="sol" href="https://github.com/BeanSamuel/cpp_practice/blob/main/zerojudge/g597.cpp" target="_blank" rel="noopener">解答</a></td></tr>
+<tr><td class="idx">9</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=n565" target="_blank" rel="noopener">n565. 降雨量統計 (Rainfall)</a></td><td>ZeroJudge</td><td><a class="sol" href="https://github.com/BeanSamuel/cpp_practice/blob/main/zerojudge/n565.cpp" target="_blank" rel="noopener">解答</a></td></tr></tbody></table></div></section>
 <section id="ch03"><h2><span class="ch-num">03</span>排序<span class="folder">Sorting</span></h2><details class="points"><summary>教學重點</summary><ul><li>比較排序：$O(n \log n)$ 演算法與 $O(n^2)$ 的差距</li>
 <li><strong>多鍵排序與穩定性</strong>：複合鍵 vs 兩次穩定排序</li>
 <li><strong>非比較排序</strong>：值域小時計數排序突破 $\Omega(n \log n)$ 下界</li>
 <li><strong>排序是預處理</strong>：資料排好後很多問題變線性掃描</li>
-<li><strong>排序的結構</strong>：逆序數對、置換的環分解</li></ul></details><div class="table-wrap"><table><thead><tr><th>#</th><th>題目</th><th>來源</th></tr></thead><tbody><tr><td class="idx">1</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=a233" target="_blank" rel="noopener">a233. 排序法~~~ 挑戰極限</a></td><td>ZeroJudge</td></tr>
-<tr><td class="idx">2</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=k605" target="_blank" rel="noopener">k605. 班級成績單</a></td><td>ZeroJudge</td></tr>
-<tr><td class="idx">3</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=a915" target="_blank" rel="noopener">a915. 二维点排序</a></td><td>ZeroJudge</td></tr>
-<tr><td class="idx">4</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=d190" target="_blank" rel="noopener">d190. 11462 - Age Sort</a></td><td>ZeroJudge</td></tr>
-<tr><td class="idx">5</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=a539" target="_blank" rel="noopener">a539. 10327 - Flip Sort</a></td><td>ZeroJudge</td></tr></tbody></table></div></section>
+<li><strong>排序的結構</strong>：逆序數對、置換的環分解</li></ul></details><div class="table-wrap"><table><thead><tr><th>#</th><th>題目</th><th>來源</th><th>解答</th></tr></thead><tbody><tr><td class="idx">1</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=a233" target="_blank" rel="noopener">a233. 排序法~~~ 挑戰極限</a></td><td>ZeroJudge</td><td class="nosol">—</td></tr>
+<tr><td class="idx">2</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=k605" target="_blank" rel="noopener">k605. 班級成績單</a></td><td>ZeroJudge</td><td class="nosol">—</td></tr>
+<tr><td class="idx">3</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=a915" target="_blank" rel="noopener">a915. 二维点排序</a></td><td>ZeroJudge</td><td class="nosol">—</td></tr>
+<tr><td class="idx">4</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=d190" target="_blank" rel="noopener">d190. 11462 - Age Sort</a></td><td>ZeroJudge</td><td class="nosol">—</td></tr>
+<tr><td class="idx">5</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=a539" target="_blank" rel="noopener">a539. 10327 - Flip Sort</a></td><td>ZeroJudge</td><td class="nosol">—</td></tr></tbody></table></div></section>
 <section id="ch04"><h2><span class="ch-num">04</span>二分搜尋<span class="folder">BinarySearch</span></h2><details class="points"><summary>教學重點</summary><ul><li>有序陣列上的二分：lower_bound / upper_bound、迴圈不變量與 off-by-one</li>
 <li>二分的本質：不需要「整個陣列有序」，只需要「判斷式能告訴你答案在哪半邊」</li>
 <li><strong>對答案二分</strong>：答案本身具單調性時，寫判定函式 <code>check()</code> 二分答案</li>
