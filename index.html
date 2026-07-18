@@ -110,7 +110,7 @@ footer {
 <body>
 <header><div class="inner">
   <h1>Telearn 演算法練習題</h1>
-  <p>各章節的補充練習題清單與教學重點・共 60 題</p>
+  <p>各章節的補充練習題清單與教學重點・共 69 題</p>
 </div></header>
 <div class="layout">
 <nav>
@@ -120,7 +120,7 @@ footer {
 <a href="#ch04"><span class="nav-num">04</span>二分搜尋<span class="count">15</span></a>
 <a href="#ch05"><span class="nav-num">05</span>雙指針與滑動視窗</a>
 <a href="#ch06"><span class="nav-num">06</span>遞迴與分治</a>
-<a href="#ch07"><span class="nav-num">07</span>回溯法</a>
+<a href="#ch07"><span class="nav-num">07</span>回溯法<span class="count">9</span></a>
 <a href="#ch08"><span class="nav-num">08</span>貪心法</a>
 <a href="#ch09"><span class="nav-num">09</span>動態規劃<span class="count">25</span></a>
 <a href="#ch10"><span class="nav-num">10</span>堆疊與佇列</a>
@@ -197,7 +197,15 @@ footer {
 <section id="ch07"><h2><span class="ch-num">07</span>回溯法<span class="folder">Backtracking</span></h2><details class="points"><summary>教學重點</summary><ul><li>狀態空間樹：把「所有可能」畫成一棵遞迴樹，暴力搜尋 = 走完整棵樹</li>
 <li>回溯三步驟：<strong>做選擇 → 遞迴 → 撤銷選擇</strong>（狀態還原）</li>
 <li>排列、組合、子集枚舉的標準骨架（<code>start</code> 參數 vs <code>used[]</code> 陣列）</li>
-<li>四種剪枝，由弱到強：</li></ul></details><p class="empty">此章節的練習題整理中，敬請期待。</p></section>
+<li>四種剪枝，由弱到強：</li></ul></details><div class="table-wrap"><table><thead><tr><th>#</th><th>題目</th><th>來源</th><th>解答</th></tr></thead><tbody><tr><td class="idx">1</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=i645" target="_blank" rel="noopener">i645. 排列組合-組合</a></td><td>ZeroJudge</td><td class="nosol">—</td></tr>
+<tr><td class="idx">2</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=i646" target="_blank" rel="noopener">i646. 排列組合-排列</a></td><td>ZeroJudge</td><td class="nosol">—</td></tr>
+<tr><td class="idx">3</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=a981" target="_blank" rel="noopener">a981. 求和問題</a></td><td>ZeroJudge</td><td class="nosol">—</td></tr>
+<tr><td class="idx">4</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=c130" target="_blank" rel="noopener">c130. 00574 - Sum It Up</a></td><td>ZeroJudge</td><td class="nosol">—</td></tr>
+<tr><td class="idx">5</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=i644" target="_blank" rel="noopener">i644. 列舉八皇后問題所有解</a></td><td>ZeroJudge</td><td class="nosol">—</td></tr>
+<tr><td class="idx">6</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=d324" target="_blank" rel="noopener">d324. 00750 - 8 Queens Chess Problem</a></td><td>ZeroJudge</td><td class="nosol">—</td></tr>
+<tr><td class="idx">7</td><td><a href="https://cses.fi/problemset/task/1622" target="_blank" rel="noopener">Creating Strings</a></td><td>CSES</td><td><a class="sol" href="https://github.com/BeanSamuel/cpp_practice/blob/main/CSES/Mathematics/Creating_Strings_II.cpp" target="_blank" rel="noopener">解答</a></td></tr>
+<tr><td class="idx">8</td><td><a href="https://cses.fi/problemset/task/1623" target="_blank" rel="noopener">Apple Division</a></td><td>CSES</td><td class="nosol">—</td></tr>
+<tr><td class="idx">9</td><td><a href="https://cses.fi/problemset/task/1624" target="_blank" rel="noopener">Chessboard and Queens</a></td><td>CSES</td><td><a class="sol" href="https://github.com/BeanSamuel/cpp_practice/blob/main/CSES/Introductory_Problems/Chessboard_and_Queens.cpp" target="_blank" rel="noopener">解答</a></td></tr></tbody></table></div></section>
 <section id="ch08"><h2><span class="ch-num">08</span>貪心法<span class="folder">Greedy</span></h2><details class="points"><summary>教學重點</summary><ul><li>貪心選擇性質與最優子結構：每步做局部最佳選擇，仍能得到全域最佳</li>
 <li><strong>交換論證（exchange argument）</strong>：假設最佳解不長這樣，做一次局部交換讓它不變差——本章每題都用它證明</li>
 <li>常見模型：排序配對、排程順序、區間排程、區間覆蓋、自訂比較排序</li>
@@ -207,8 +215,8 @@ footer {
 <li>滾動陣列與空間優化</li>
 <li>經典模型：一維 DP、背包 DP、序列/字串 DP、網格 DP、區間 DP、狀態機 DP</li></ul></details><div class="table-wrap"><table><thead><tr><th>#</th><th>題目</th><th>來源</th><th>解答</th></tr></thead><tbody><tr><td class="idx">1</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=d212" target="_blank" rel="noopener">d212. 東東爬階梯</a></td><td>ZeroJudge</td><td><a class="sol" href="https://github.com/BeanSamuel/cpp_practice/blob/main/zerojudge/d212.cpp" target="_blank" rel="noopener">解答</a></td></tr>
 <tr><td class="idx">2</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=d038" target="_blank" rel="noopener">d038. 00900 - Brick Wall Patterns</a></td><td>ZeroJudge</td><td><a class="sol" href="https://github.com/BeanSamuel/cpp_practice/blob/main/zerojudge/d038.cpp" target="_blank" rel="noopener">解答</a></td></tr>
-<tr><td class="idx">3</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=a519" target="_blank" rel="noopener">a519. 12459 - Bees&#x27; ancestors</a></td><td>ZeroJudge</td><td class="nosol">—</td></tr>
-<tr><td class="idx">4</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=d261" target="_blank" rel="noopener">d261. 11000 - Bee</a></td><td>ZeroJudge</td><td class="nosol">—</td></tr>
+<tr><td class="idx">3</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=a519" target="_blank" rel="noopener">a519. 12459 - Bees&#x27; ancestors</a></td><td>ZeroJudge</td><td><a class="sol" href="https://github.com/BeanSamuel/cpp_practice/blob/main/zerojudge/a519.cpp" target="_blank" rel="noopener">解答</a></td></tr>
+<tr><td class="idx">4</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=d261" target="_blank" rel="noopener">d261. 11000 - Bee</a></td><td>ZeroJudge</td><td><a class="sol" href="https://github.com/BeanSamuel/cpp_practice/blob/main/zerojudge/d261.cpp" target="_blank" rel="noopener">解答</a></td></tr>
 <tr><td class="idx">5</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=d904" target="_blank" rel="noopener">d904. 換零錢</a></td><td>ZeroJudge</td><td><a class="sol" href="https://github.com/BeanSamuel/cpp_practice/blob/main/zerojudge/d904.cpp" target="_blank" rel="noopener">解答</a></td></tr>
 <tr><td class="idx">6</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=d133" target="_blank" rel="noopener">d133. 00357 - Let Me Count The Ways</a></td><td>ZeroJudge</td><td class="nosol">—</td></tr>
 <tr><td class="idx">7</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=d224" target="_blank" rel="noopener">d224. 11296 - Counting Solutions to an Integral Equation</a></td><td>ZeroJudge</td><td class="nosol">—</td></tr>
