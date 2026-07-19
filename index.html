@@ -110,7 +110,7 @@ footer {
 <body>
 <header><div class="inner">
   <h1>Telearn 演算法練習題</h1>
-  <p>各章節的補充練習題清單與教學重點・共 102 題</p>
+  <p>各章節的補充練習題清單與教學重點・共 109 題</p>
 </div></header>
 <div class="layout">
 <nav>
@@ -129,7 +129,7 @@ footer {
 <a href="#ch13"><span class="nav-num">13</span>樹</a>
 <a href="#ch14"><span class="nav-num">14</span>圖的走訪（BFS / DFS）</a>
 <a href="#ch15"><span class="nav-num">15</span>最短路徑</a>
-<a href="#ch16"><span class="nav-num">16</span>最小生成樹</a>
+<a href="#ch16"><span class="nav-num">16</span>最小生成樹<span class="count">7</span></a>
 <a href="#ch17"><span class="nav-num">17</span>拓撲排序</a>
 <a href="#ch18"><span class="nav-num">18</span>線段樹與樹狀陣列</a>
 <a href="#ch19"><span class="nav-num">19</span>字串演算法</a>
@@ -302,7 +302,13 @@ footer {
 <section id="ch16"><h2><span class="ch-num">16</span>最小生成樹<span class="folder">MinimumSpanningTree</span></h2><details class="points"><summary>教學重點</summary><ul><li><strong>Kruskal</strong>：邊排序＋並查集，$O(M \log M)$，稀疏圖首選（前置：DisjointSet 主題）</li>
 <li><strong>Prim</strong>：維護「點到樹的最短距離」，$O(N^2)$ 版本是稠密圖首選；與 Dijkstra 對照記憶</li>
 <li><strong>MST 的性質</strong>：cut property（貪心不後悔的理由）、瓶頸性質（同時最小化最大邊）</li>
-<li><strong>建模</strong>：互補轉化（最多拆 = 總和 − 最少留）、虛擬源點（「自立選項」變成邊）</li></ul></details><p class="empty">此章節的練習題整理中，敬請期待。</p></section>
+<li><strong>建模</strong>：互補轉化（最多拆 = 總和 − 最少留）、虛擬源點（「自立選項」變成邊）</li></ul></details><div class="table-wrap"><table><thead><tr><th>#</th><th>題目</th><th>來源</th><th>解答</th></tr></thead><tbody><tr><td class="idx">1</td><td><a href="https://cses.fi/problemset/task/1675" target="_blank" rel="noopener">Road Reparation</a></td><td>CSES</td><td class="nosol">—</td></tr>
+<tr><td class="idx">2</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=e509" target="_blank" rel="noopener">e509. Conscription</a></td><td>Zerojudge</td><td class="nosol">—</td></tr>
+<tr><td class="idx">3</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=a129" target="_blank" rel="noopener">a129. 最小生成樹</a></td><td>Zerojudge</td><td class="nosol">—</td></tr>
+<tr><td class="idx">4</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=f506" target="_blank" rel="noopener">f506. 11747 - Heavy Cycle Edges</a></td><td>Zerojudge</td><td class="nosol">—</td></tr>
+<tr><td class="idx">5</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=k715" target="_blank" rel="noopener">k715. 糧食便道 (Supply)</a></td><td>Zerojudge</td><td class="nosol">—</td></tr>
+<tr><td class="idx">6</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=c495" target="_blank" rel="noopener">c495. 四、次小生成樹(SBMST)</a></td><td>Zerojudge</td><td class="nosol">—</td></tr>
+<tr><td class="idx">7</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=q839" target="_blank" rel="noopener">q839. 4. 分組遊戲</a></td><td>Zerojudge</td><td><a class="sol" href="https://github.com/BeanSamuel/cpp_practice/blob/main/zerojudge/q839.cpp" target="_blank" rel="noopener">解答</a></td></tr></tbody></table></div></section>
 <section id="ch17"><h2><span class="ch-num">17</span>拓撲排序<span class="folder">TopologicalSort</span></h2><details class="points"><summary>教學重點</summary><ul><li>DAG 與拓撲序：「先後約束」的圖模型</li>
 <li>Kahn 演算法（BFS + 入度表）；DFS 三色標記為另一解法</li>
 <li>環偵測：完成數 &lt; N 即有環</li>
