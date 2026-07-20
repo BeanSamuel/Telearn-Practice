@@ -110,7 +110,7 @@ footer {
 <body>
 <header><div class="inner">
   <h1>Telearn 演算法練習題</h1>
-  <p>各章節的補充練習題清單與教學重點・共 147 題</p>
+  <p>各章節的補充練習題清單與教學重點・共 153 題</p>
 </div></header>
 <div class="layout">
 <nav>
@@ -124,7 +124,7 @@ footer {
 <a href="#ch08"><span class="nav-num">08</span>貪心法<span class="count">17</span></a>
 <a href="#ch09"><span class="nav-num">09</span>動態規劃<span class="count">25</span></a>
 <a href="#ch10"><span class="nav-num">10</span>堆疊與佇列<span class="count">8</span></a>
-<a href="#ch11"><span class="nav-num">11</span>堆積與優先佇列</a>
+<a href="#ch11"><span class="nav-num">11</span>堆積與優先佇列<span class="count">6</span></a>
 <a href="#ch12"><span class="nav-num">12</span>並查集<span class="count">13</span></a>
 <a href="#ch13"><span class="nav-num">13</span>樹</a>
 <a href="#ch14"><span class="nav-num">14</span>圖的走訪（BFS / DFS）</a>
@@ -162,6 +162,7 @@ footer {
 <li><strong>多鍵排序與穩定性</strong>：複合鍵 vs 兩次穩定排序</li>
 <li><strong>非比較排序</strong>：值域小時計數排序突破 $\Omega(n \log n)$ 下界</li>
 <li><strong>排序是預處理</strong>：資料排好後很多問題變線性掃描</li>
+<li><strong>離散化（座標壓縮）</strong>：值域大但真正用到的值很少時，排序去重換名次，把「值域大小」縮成「資料筆數」</li>
 <li><strong>排序的結構</strong>：逆序數對、置換的環分解</li></ul></details><div class="table-wrap"><table><thead><tr><th>#</th><th>題目</th><th>來源</th><th>解答</th></tr></thead><tbody><tr><td class="idx">1</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=a233" target="_blank" rel="noopener">a233. 排序法~~~ 挑戰極限</a></td><td>ZeroJudge</td><td><a class="sol" href="https://github.com/BeanSamuel/cpp_practice/blob/main/zerojudge/a233.cpp" target="_blank" rel="noopener">解答</a></td></tr>
 <tr><td class="idx">2</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=k605" target="_blank" rel="noopener">k605. 班級成績單</a></td><td>ZeroJudge</td><td class="nosol">—</td></tr>
 <tr><td class="idx">3</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=a915" target="_blank" rel="noopener">a915. 二维点排序</a></td><td>ZeroJudge</td><td><a class="sol" href="https://github.com/BeanSamuel/cpp_practice/blob/main/zerojudge/a915.cpp" target="_blank" rel="noopener">解答</a></td></tr>
@@ -301,7 +302,12 @@ footer {
 <section id="ch11"><h2><span class="ch-num">11</span>堆積與優先佇列<span class="folder">Heap_PriorityQueue</span></h2><details class="points"><summary>教學重點</summary><ul><li>二元堆積的性質與操作：上浮／下沉、$O(\log n)$ 插入與取極值、$O(n)$ 建堆</li>
 <li>堆的使用場景：<strong>候選集合一邊變動、一邊要反覆取極值</strong>——這是排序做不到的</li>
 <li>常見模式：tie-break 編進比較鍵、固定大小堆做 Top-K、雙堆對夾、資源池、反悔貪心</li>
-<li>Python <code>heapq</code> 只有最小堆（最大堆存負值）；C++ <code>priority_queue</code> 預設最大堆（<code>greater&lt;&gt;</code> 轉最小）</li></ul></details><p class="empty">此章節的練習題整理中，敬請期待。</p></section>
+<li>Python <code>heapq</code> 只有最小堆（最大堆存負值）；C++ <code>priority_queue</code> 預設最大堆（<code>greater&lt;&gt;</code> 轉最小）</li></ul></details><div class="table-wrap"><table><thead><tr><th>#</th><th>題目</th><th>來源</th><th>解答</th></tr></thead><tbody><tr><td class="idx">1</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=d900" target="_blank" rel="noopener">d900. NOIP2010 2.接水问题</a></td><td>Zerojudge</td><td class="nosol">—</td></tr>
+<tr><td class="idx">2</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=d221" target="_blank" rel="noopener">d221. 10954 - Add All</a></td><td>Zerojudge</td><td class="nosol">—</td></tr>
+<tr><td class="idx">3</td><td><a href="https://cses.fi/problemset/task/1076" target="_blank" rel="noopener">Sliding Window Median</a></td><td>CSES</td><td><a class="sol" href="https://github.com/BeanSamuel/cpp_practice/blob/main/CSES/Sliding_Window_Problems/Sliding_Window_Median.cpp" target="_blank" rel="noopener">解答</a></td></tr>
+<tr><td class="idx">4</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=f632" target="_blank" rel="noopener">f632. 渡船頭</a></td><td>Zerojudge</td><td class="nosol">—</td></tr>
+<tr><td class="idx">5</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=f631" target="_blank" rel="noopener">f631. 同學會</a></td><td>Zerojudge</td><td class="nosol">—</td></tr>
+<tr><td class="idx">6</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=n688" target="_blank" rel="noopener">n688. pC. 卡牌遊戲</a></td><td>Zerojudge</td><td class="nosol">—</td></tr></tbody></table></div></section>
 <section id="ch12"><h2><span class="ch-num">12</span>並查集<span class="folder">DisjointSet</span></h2><details class="points"><summary>教學重點</summary><ul><li>Find / Union 操作、路徑壓縮與按大小（按秩）合併</li>
 <li>連通性判斷與元件數維護</li>
 <li>集合附加資訊：size 隨合併累加</li>
