@@ -126,16 +126,17 @@ footer {
 <a href="#ch10"><span class="nav-num">10</span>堆疊與佇列<span class="count">8</span></a>
 <a href="#ch11"><span class="nav-num">11</span>堆積與優先佇列<span class="count">6</span></a>
 <a href="#ch12"><span class="nav-num">12</span>並查集<span class="count">13</span></a>
-<a href="#ch13"><span class="nav-num">13</span>樹</a>
-<a href="#ch14"><span class="nav-num">14</span>圖的走訪（BFS / DFS）</a>
-<a href="#ch15"><span class="nav-num">15</span>最短路徑</a>
+<a href="#ch13"><span class="nav-num">13</span>圖的走訪（BFS / DFS）</a>
+<a href="#ch14"><span class="nav-num">14</span>最短路徑</a>
+<a href="#ch15"><span class="nav-num">15</span>樹</a>
 <a href="#ch16"><span class="nav-num">16</span>最小生成樹<span class="count">7</span></a>
 <a href="#ch17"><span class="nav-num">17</span>拓撲排序</a>
-<a href="#ch18"><span class="nav-num">18</span>線段樹與樹狀陣列</a>
-<a href="#ch19"><span class="nav-num">19</span>字串演算法</a>
-<a href="#ch20"><span class="nav-num">20</span>數論與數學</a>
-<a href="#ch21"><span class="nav-num">21</span>位元運算</a>
-<a href="#ch22"><span class="nav-num">22</span>計算幾何</a>
+<a href="#ch18"><span class="nav-num">18</span>進階圖論（SCC／橋／二分圖匹配／2-SAT）</a>
+<a href="#ch19"><span class="nav-num">19</span>線段樹與樹狀陣列</a>
+<a href="#ch20"><span class="nav-num">20</span>字串演算法</a>
+<a href="#ch21"><span class="nav-num">21</span>數論與數學</a>
+<a href="#ch22"><span class="nav-num">22</span>位元運算</a>
+<a href="#ch23"><span class="nav-num">23</span>計算幾何</a>
 </nav>
 <main>
 <section id="ch01"><h2><span class="ch-num">01</span>基礎與時間複雜度<span class="folder">Basics_Complexity</span></h2><details class="points"><summary>教學重點</summary><ul><li>Big-O 記號與常見複雜度階層</li>
@@ -331,22 +332,22 @@ footer {
 <tr><td class="idx">11</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=g598" target="_blank" rel="noopener">g598. 4. 真假子圖</a></td><td>Zerojudge</td><td class="nosol">—</td></tr>
 <tr><td class="idx">12</td><td><a href="https://cses.fi/problemset/task/1676" target="_blank" rel="noopener">Road Construction</a></td><td>CSES</td><td class="nosol">—</td></tr>
 <tr><td class="idx">13</td><td><a href="https://cses.fi/problemset/task/1677" target="_blank" rel="noopener">Network Breakdown</a></td><td>CSES</td><td class="nosol">—</td></tr></tbody></table></div></section>
-<section id="ch13"><h2><span class="ch-num">13</span>樹<span class="folder">Tree</span></h2><details class="points"><summary>教學重點</summary><ul><li>樹的表示法（父指標／子串列）與走訪（前中後序、BFS 層序）</li>
-<li>「先兒後父」的計算順序：BFS 序反向掃 = 免遞迴的後序（深鏈不爆堆疊）</li>
-<li>兩次走訪求直徑；由走訪序重建樹</li>
-<li>LCA 倍增（binary lifting）</li>
-<li>樹上 DP：狀態 = (節點, 自身選擇)</li></ul></details><p class="empty">此章節的練習題整理中，敬請期待。</p></section>
-<section id="ch14"><h2><span class="ch-num">14</span>圖的走訪（BFS / DFS）<span class="folder">Graph_BFS_DFS</span></h2><details class="points"><summary>教學重點</summary><ul><li>鄰接串列表示法、DFS 與 BFS 的實作與差異（堆疊 vs 佇列）</li>
+<section id="ch13"><h2><span class="ch-num">13</span>圖的走訪（BFS / DFS）<span class="folder">Graph_BFS_DFS</span></h2><details class="points"><summary>教學重點</summary><ul><li>鄰接串列表示法、DFS 與 BFS 的實作與差異（堆疊 vs 佇列）</li>
 <li>走訪順序與 visited 標記：每個節點只走一次，$O(V+E)$</li>
 <li>網格圖走訪與 Flood Fill（含「從邊界逆向出發」的思考方式）</li>
 <li>多源 BFS：多個起點同時入隊，分層數 = 距離／時間</li>
 <li>圖染色與二分圖判定（奇環）</li>
 <li>隱式圖：把「狀態」當節點、即時產生鄰居做 BFS</li></ul></details><p class="empty">此章節的練習題整理中，敬請期待。</p></section>
-<section id="ch15"><h2><span class="ch-num">15</span>最短路徑<span class="folder">ShortestPath</span></h2><details class="points"><summary>教學重點</summary><ul><li>Dijkstra（含優先佇列實作）</li>
+<section id="ch14"><h2><span class="ch-num">14</span>最短路徑<span class="folder">ShortestPath</span></h2><details class="points"><summary>教學重點</summary><ul><li>Dijkstra（含優先佇列實作）</li>
 <li>Bellman-Ford 與負邊、負環偵測</li>
 <li>Floyd-Warshall 全點對最短路，及其「換運算」變化：傳遞閉包 $(\lor, \land)$、瓶頸路徑 $(\max, \min)$</li>
 <li>路徑回溯：parent 陣列（往回走）vs next 矩陣（往前走）</li>
 <li>變化題思路：指定中繼點（最短路可拼接）、邊數限制（狀態加一維）</li></ul></details><p class="empty">此章節的練習題整理中，敬請期待。</p></section>
+<section id="ch15"><h2><span class="ch-num">15</span>樹<span class="folder">Tree</span></h2><details class="points"><summary>教學重點</summary><ul><li>樹的表示法（父指標／子串列）與走訪（前中後序、BFS 層序）</li>
+<li>「先兒後父」的計算順序：BFS 序反向掃 = 免遞迴的後序（深鏈不爆堆疊）</li>
+<li>兩次走訪求直徑；由走訪序重建樹</li>
+<li>LCA 倍增（binary lifting）</li>
+<li>樹上 DP：狀態 = (節點, 自身選擇)</li></ul></details><p class="empty">此章節的練習題整理中，敬請期待。</p></section>
 <section id="ch16"><h2><span class="ch-num">16</span>最小生成樹<span class="folder">MinimumSpanningTree</span></h2><details class="points"><summary>教學重點</summary><ul><li><strong>Kruskal</strong>：邊排序＋並查集，$O(M \log M)$，稀疏圖首選（前置：DisjointSet 主題）</li>
 <li><strong>Prim</strong>：維護「點到樹的最短距離」，$O(N^2)$ 版本是稠密圖首選；與 Dijkstra 對照記憶</li>
 <li><strong>MST 的性質</strong>：cut property（貪心不後悔的理由）、瓶頸性質（同時最小化最大邊）</li>
@@ -362,25 +363,26 @@ footer {
 <li>環偵測：完成數 &lt; N 即有環</li>
 <li>唯一化輸出：用最小堆取字典序最小拓撲序</li>
 <li><strong>DAG 上的 DP</strong>：拓撲序 = DP 的計算順序（max 求關鍵路徑、sum 求路線計數）</li></ul></details><p class="empty">此章節的練習題整理中，敬請期待。</p></section>
-<section id="ch18"><h2><span class="ch-num">18</span>線段樹與樹狀陣列<span class="folder">SegmentTree_BIT</span></h2><details class="points"><summary>教學重點</summary><ul><li><strong>樹狀陣列 (BIT / Fenwick)</strong>：<code>lowbit</code> 拆段，單點改＋前綴查各 $O(\log N)$，碼短常數小</li>
+<section id="ch18"><h2><span class="ch-num">18</span>進階圖論（SCC／橋／二分圖匹配／2-SAT）<span class="folder">AdvancedGraph</span></h2><p class="empty">此章節的練習題整理中，敬請期待。</p></section>
+<section id="ch19"><h2><span class="ch-num">19</span>線段樹與樹狀陣列<span class="folder">SegmentTree_BIT</span></h2><details class="points"><summary>教學重點</summary><ul><li><strong>樹狀陣列 (BIT / Fenwick)</strong>：<code>lowbit</code> 拆段，單點改＋前綴查各 $O(\log N)$，碼短常數小</li>
 <li><strong>差分技巧</strong>：把「區間改」壓成端點的「單點改」——BIT 的能力邊界靠它擴張</li>
 <li><strong>值域 BIT ＋離散化</strong>：把「數逆序對」變成「值域上的前綴計數」</li>
 <li><strong>線段樹 (segment tree)</strong>：節點存可合併資訊（min／max／和／GCD…），區間查詢＋單點改</li>
 <li><strong>懶標記 (lazy propagation)</strong>：區間改暫存在高層節點，用到才下推——「區間改＋區間查」的通用框架</li>
 <li>選擇心法：<strong>查詢可前綴相減（和、計數）→ BIT；不可相減（min／max）或需區間改區間查 → 線段樹</strong></li></ul></details><p class="empty">此章節的練習題整理中，敬請期待。</p></section>
-<section id="ch19"><h2><span class="ch-num">19</span>字串演算法<span class="folder">String</span></h2><details class="points"><summary>教學重點</summary><ul><li>Trie 字典樹：按前綴組織字串，查詢與字典大小無關</li>
+<section id="ch20"><h2><span class="ch-num">20</span>字串演算法<span class="folder">String</span></h2><details class="points"><summary>教學重點</summary><ul><li>Trie 字典樹：按前綴組織字串，查詢與字典大小無關</li>
 <li>KMP：fail 函數描述字串的<strong>自我重疊結構</strong>——匹配與週期都靠它</li>
 <li>Z-algorithm：每個位置與開頭的最長重合，「最右匹配區間」的繼承＋延伸</li>
 <li>Manacher：線性求所有中心的最長迴文，攤銷論證同單調堆疊</li>
 <li>String Hashing：把「字串相等」變「數字相等」，$O(1)$ 比任意兩段；機率性工具，要會算碰撞機率</li>
 <li>共同主題：避免「從頭再比」——已比對過的部分自帶資訊</li></ul></details><p class="empty">此章節的練習題整理中，敬請期待。</p></section>
-<section id="ch20"><h2><span class="ch-num">20</span>數論與數學<span class="folder">NumberTheory_Math</span></h2><details class="points"><summary>教學重點</summary><ul><li>質數判定與埃氏篩</li>
+<section id="ch21"><h2><span class="ch-num">21</span>數論與數學<span class="folder">NumberTheory_Math</span></h2><details class="points"><summary>教學重點</summary><ul><li>質數判定與埃氏篩</li>
 <li>GCD / LCM、擴展歐幾里得</li>
 <li>模運算、快速冪、模反元素</li></ul></details><p class="empty">此章節的練習題整理中，敬請期待。</p></section>
-<section id="ch21"><h2><span class="ch-num">21</span>位元運算<span class="folder">BitManipulation</span></h2><details class="points"><summary>教學重點</summary><ul><li>AND / OR / XOR / 位移的性質</li>
+<section id="ch22"><h2><span class="ch-num">22</span>位元運算<span class="folder">BitManipulation</span></h2><details class="points"><summary>教學重點</summary><ul><li>AND / OR / XOR / 位移的性質</li>
 <li>常用技巧：lowbit、位元枚舉子集</li>
 <li>位元遮罩狀態壓縮</li></ul></details><p class="empty">此章節的練習題整理中，敬請期待。</p></section>
-<section id="ch22"><h2><span class="ch-num">22</span>計算幾何<span class="folder">Geometry</span></h2><details class="points"><summary>教學重點</summary><ul><li><strong>整數運算優先</strong>：判定與面積都避開浮點——輸出 2A、距離平方、叉積正負</li>
+<section id="ch23"><h2><span class="ch-num">23</span>計算幾何<span class="folder">Geometry</span></h2><details class="points"><summary>教學重點</summary><ul><li><strong>整數運算優先</strong>：判定與面積都避開浮點——輸出 2A、距離平方、叉積正負</li>
 <li><strong>叉積</strong>是整章的基石：轉向判斷、有向面積、凸性檢查</li>
 <li>鞋帶公式（多邊形面積）、線段相交（跨立實驗）、凸包（Andrew 單調鏈）、最近點對（分治）</li>
 <li>溢位意識：座標 $10^9$ 時叉積達 $8 \times 10^{18}$，逼近 64 位元上限</li></ul></details><p class="empty">此章節的練習題整理中，敬請期待。</p></section>
