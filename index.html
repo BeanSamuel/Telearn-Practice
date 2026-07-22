@@ -117,11 +117,11 @@ footer {
 <a href="#ch01"><span class="nav-num">01</span>基礎與時間複雜度<span class="count">5</span></a>
 <a href="#ch02"><span class="nav-num">02</span>前綴和與差分<span class="count">15</span></a>
 <a href="#ch03"><span class="nav-num">03</span>排序<span class="count">6</span></a>
-<a href="#ch04"><span class="nav-num">04</span>二分搜尋<span class="count">15</span></a>
+<a href="#ch04"><span class="nav-num">04</span>二分搜尋<span class="count">14</span></a>
 <a href="#ch05"><span class="nav-num">05</span>雙指針與滑動視窗<span class="count">15</span></a>
 <a href="#ch06"><span class="nav-num">06</span>遞迴與分治<span class="count">18</span></a>
 <a href="#ch07"><span class="nav-num">07</span>回溯法<span class="count">9</span></a>
-<a href="#ch08"><span class="nav-num">08</span>貪心法<span class="count">17</span></a>
+<a href="#ch08"><span class="nav-num">08</span>貪心法<span class="count">18</span></a>
 <a href="#ch09"><span class="nav-num">09</span>動態規劃<span class="count">25</span></a>
 <a href="#ch10"><span class="nav-num">10</span>堆疊與佇列<span class="count">8</span></a>
 <a href="#ch11"><span class="nav-num">11</span>堆積與優先佇列<span class="count">6</span></a>
@@ -189,11 +189,10 @@ footer {
 <tr><td class="idx">8</td><td><a href="https://cses.fi/problemset/task/1085" target="_blank" rel="noopener">Array Division</a></td><td>CSES</td><td><a class="sol" href="https://github.com/BeanSamuel/cpp_practice/blob/main/CSES/Sorting_and_Searching/Array_Division.cpp" target="_blank" rel="noopener">解答</a></td></tr>
 <tr><td class="idx">9</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=f581" target="_blank" rel="noopener">f581. 3. 圓環出口</a></td><td>ZeroJudge</td><td><a class="sol" href="https://github.com/BeanSamuel/cpp_practice/blob/main/zerojudge/f581.cpp" target="_blank" rel="noopener">解答</a></td></tr>
 <tr><td class="idx">10</td><td><a href="https://cses.fi/problemset/task/2422" target="_blank" rel="noopener">Multiplication Table</a></td><td>CSES</td><td><a class="sol" href="https://github.com/BeanSamuel/cpp_practice/blob/main/CSES/Additional_Problems_I/Multiplication_Table.cpp" target="_blank" rel="noopener">解答</a></td></tr>
-<tr><td class="idx">11</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=j608" target="_blank" rel="noopener">j608. 4. 機器出租</a></td><td>ZeroJudge</td><td class="nosol">—</td></tr>
-<tr><td class="idx">12</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=f607" target="_blank" rel="noopener">f607. 3. 切割費用</a></td><td>ZeroJudge</td><td class="nosol">—</td></tr>
-<tr><td class="idx">13</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=j125" target="_blank" rel="noopener">j125. 4. 蓋步道</a></td><td>ZeroJudge</td><td class="nosol">—</td></tr>
-<tr><td class="idx">14</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=o079" target="_blank" rel="noopener">o079. 4. 最佳選擇</a></td><td>ZeroJudge</td><td class="nosol">—</td></tr>
-<tr><td class="idx">15</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=o714" target="_blank" rel="noopener">o714. 4. 搭到終點</a></td><td>ZeroJudge</td><td><a class="sol" href="https://github.com/BeanSamuel/cpp_practice/blob/main/zerojudge/o714.cpp" target="_blank" rel="noopener">解答</a></td></tr></tbody></table></div></section>
+<tr><td class="idx">11</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=f607" target="_blank" rel="noopener">f607. 3. 切割費用</a></td><td>ZeroJudge</td><td class="nosol">—</td></tr>
+<tr><td class="idx">12</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=j125" target="_blank" rel="noopener">j125. 4. 蓋步道</a></td><td>ZeroJudge</td><td class="nosol">—</td></tr>
+<tr><td class="idx">13</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=o079" target="_blank" rel="noopener">o079. 4. 最佳選擇</a></td><td>ZeroJudge</td><td class="nosol">—</td></tr>
+<tr><td class="idx">14</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=o714" target="_blank" rel="noopener">o714. 4. 搭到終點</a></td><td>ZeroJudge</td><td><a class="sol" href="https://github.com/BeanSamuel/cpp_practice/blob/main/zerojudge/o714.cpp" target="_blank" rel="noopener">解答</a></td></tr></tbody></table></div></section>
 <section id="ch05"><h2><span class="ch-num">05</span>雙指針與滑動視窗<span class="folder">TwoPointers_SlidingWindow</span></h2><details class="points"><summary>教學重點</summary><ul><li><strong>對向雙指針</strong>：兩指針從兩端相向而行，每步淘汰一個元素——找配對，也能「從兩端確定答案」</li>
 <li><strong>同向雙指針（滑動視窗）</strong>：固定長度視窗的 $O(1)$ 增量更新；可變長度視窗的「單調性讓左指針不回頭」</li>
 <li><strong>視窗內狀態的維護</strong>：從一個總和，到雜湊計數表（種類數）</li>
@@ -265,7 +264,8 @@ footer {
 <tr><td class="idx">14</td><td><a href="https://cses.fi/problemset/task/2163" target="_blank" rel="noopener">Josephus Problem II</a></td><td>CSES</td><td><a class="sol" href="https://github.com/BeanSamuel/cpp_practice/blob/main/CSES/Sorting_and_Searching/Josephus_Problem_I.cpp" target="_blank" rel="noopener">解答</a></td></tr>
 <tr><td class="idx">15</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=e576" target="_blank" rel="noopener">e576. 10020 - Minimal Coverage</a></td><td>Zerojudge</td><td class="nosol">—</td></tr>
 <tr><td class="idx">16</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=b219" target="_blank" rel="noopener">b219. 4. 工作順序問題</a></td><td>Zerojudge</td><td class="nosol">—</td></tr>
-<tr><td class="idx">17</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=f455" target="_blank" rel="noopener">f455. 詠竣的哀鳳12</a></td><td>Zerojudge</td><td class="nosol">—</td></tr></tbody></table></div></section>
+<tr><td class="idx">17</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=f455" target="_blank" rel="noopener">f455. 詠竣的哀鳳12</a></td><td>Zerojudge</td><td class="nosol">—</td></tr>
+<tr><td class="idx">18</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=j608" target="_blank" rel="noopener">j608. 4. 機器出租</a></td><td>ZeroJudge</td><td><a class="sol" href="https://github.com/BeanSamuel/cpp_practice/blob/main/zerojudge/j608.cpp" target="_blank" rel="noopener">解答</a></td></tr></tbody></table></div></section>
 <section id="ch09"><h2><span class="ch-num">09</span>動態規劃<span class="folder">DynamicProgramming</span></h2><details class="points"><summary>教學重點</summary><ul><li>狀態定義與轉移方程</li>
 <li>Top-down 記憶化 vs Bottom-up 迭代</li>
 <li>滾動陣列與空間優化</li>
