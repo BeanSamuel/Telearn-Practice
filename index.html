@@ -110,7 +110,7 @@ footer {
 <body>
 <header><div class="inner">
   <h1>Telearn 演算法練習題</h1>
-  <p>各章節的補充練習題清單與教學重點・共 215 題</p>
+  <p>各章節的補充練習題清單與教學重點・共 223 題</p>
 </div></header>
 <div class="layout">
 <nav>
@@ -131,7 +131,7 @@ footer {
 <a href="#ch15"><span class="nav-num">15</span>樹</a>
 <a href="#ch16"><span class="nav-num">16</span>最小生成樹<span class="count">7</span></a>
 <a href="#ch17"><span class="nav-num">17</span>拓撲排序</a>
-<a href="#ch18"><span class="nav-num">18</span>進階圖論</a>
+<a href="#ch18"><span class="nav-num">18</span>進階圖論<span class="count">8</span></a>
 <a href="#ch19"><span class="nav-num">19</span>線段樹與樹狀陣列</a>
 <a href="#ch20"><span class="nav-num">20</span>字串演算法<span class="count">11</span></a>
 <a href="#ch21"><span class="nav-num">21</span>數論與數學</a>
@@ -396,7 +396,19 @@ footer {
 <li>環偵測：完成數 &lt; N 即有環</li>
 <li>唯一化輸出：用最小堆取字典序最小拓撲序</li>
 <li><strong>DAG 上的 DP</strong>：拓撲序 = DP 的計算順序（max 求關鍵路徑、sum 求路線計數）</li></ul></details><p class="empty">此章節的練習題整理中，敬請期待。</p></section>
-<section id="ch18"><h2><span class="ch-num">18</span>進階圖論<span class="folder">AdvancedGraph</span></h2><p class="empty">此章節的練習題整理中，敬請期待。</p></section>
+<section id="ch18"><h2><span class="ch-num">18</span>進階圖論<span class="folder">AdvancedGraph</span></h2><details class="points"><summary>教學重點</summary><ul><li><strong>DFS 樹與 low-link</strong>：$disc$（走訪時間戳）與 $low$（子樹能繞回的最早時間戳）是本章共同語言</li>
+<li><strong>Tarjan 強連通分量（SCC）</strong>：有向圖一次 DFS 求 SCC，$low[v]=disc[v]$ 即為分量的根；縮點後成 DAG</li>
+<li><strong>Tarjan 橋與割點</strong>：無向圖 low-link 的另一應用；用<strong>邊編號</strong>避開回頭路才能正確處理平行邊</li>
+<li><strong>二分圖最大匹配</strong>：匈牙利演算法／增廣路，「請已就位者讓位」的交替路思想</li>
+<li><strong>2-SAT</strong>：把子句 $(P \lor Q)$ 轉成蘊含 $\lnot P \Rightarrow Q$、$\lnot Q \Rightarrow P$，用 SCC 判可滿足性</li>
+<li><strong>深遞迴的實作現實</strong>：$n$ 達 $10^5$ 時遞迴會爆堆疊，標準解一律以<strong>顯式堆疊</strong>改寫 DFS</li></ul></details><div class="table-wrap"><table><thead><tr><th>#</th><th>題目</th><th>來源</th><th>解答</th></tr></thead><tbody><tr><td class="idx">1</td><td><a href="https://cses.fi/problemset/task/1683" target="_blank" rel="noopener">Planets and Kingdoms</a></td><td>CSES</td><td class="nosol">—</td></tr>
+<tr><td class="idx">2</td><td><a href="https://cses.fi/problemset/task/1682" target="_blank" rel="noopener">Flight Routes Check</a></td><td>CSES</td><td class="nosol">—</td></tr>
+<tr><td class="idx">3</td><td><a href="https://cses.fi/problemset/task/1686" target="_blank" rel="noopener">Coin Collector</a></td><td>CSES</td><td class="nosol">—</td></tr>
+<tr><td class="idx">4</td><td><a href="https://cses.fi/problemset/task/2076" target="_blank" rel="noopener">Necessary Roads</a></td><td>CSES</td><td class="nosol">—</td></tr>
+<tr><td class="idx">5</td><td><a href="https://cses.fi/problemset/task/2077" target="_blank" rel="noopener">Necessary Cities</a></td><td>CSES</td><td class="nosol">—</td></tr>
+<tr><td class="idx">6</td><td><a href="https://cses.fi/problemset/task/1696" target="_blank" rel="noopener">School Dance</a></td><td>CSES</td><td class="nosol">—</td></tr>
+<tr><td class="idx">7</td><td><a href="https://cses.fi/problemset/task/1684" target="_blank" rel="noopener">Giant Pizza</a></td><td>CSES</td><td class="nosol">—</td></tr>
+<tr><td class="idx">8</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=c455" target="_blank" rel="noopener">c455. 4. 警力配置</a></td><td>Zerojudge</td><td class="nosol">—</td></tr></tbody></table></div></section>
 <section id="ch19"><h2><span class="ch-num">19</span>線段樹與樹狀陣列<span class="folder">SegmentTree_BIT</span></h2><details class="points"><summary>教學重點</summary><ul><li><strong>樹狀陣列 (BIT / Fenwick)</strong>：<code>lowbit</code> 拆段，單點改＋前綴查各 $O(\log N)$，碼短常數小</li>
 <li><strong>差分技巧</strong>：把「區間改」壓成端點的「單點改」——BIT 的能力邊界靠它擴張</li>
 <li><strong>值域 BIT ＋離散化</strong>：把「數逆序對」變成「值域上的前綴計數」</li>
