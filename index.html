@@ -110,7 +110,7 @@ footer {
 <body>
 <header><div class="inner">
   <h1>Telearn 演算法練習題</h1>
-  <p>各章節的補充練習題清單與教學重點・共 237 題</p>
+  <p>各章節的補充練習題清單與教學重點・共 248 題</p>
 </div></header>
 <div class="layout">
 <nav>
@@ -130,7 +130,7 @@ footer {
 <a href="#ch14"><span class="nav-num">14</span>最短路徑<span class="count">17</span></a>
 <a href="#ch15"><span class="nav-num">15</span>樹<span class="count">14</span></a>
 <a href="#ch16"><span class="nav-num">16</span>最小生成樹<span class="count">7</span></a>
-<a href="#ch17"><span class="nav-num">17</span>拓撲排序</a>
+<a href="#ch17"><span class="nav-num">17</span>拓撲排序<span class="count">11</span></a>
 <a href="#ch18"><span class="nav-num">18</span>進階圖論<span class="count">8</span></a>
 <a href="#ch19"><span class="nav-num">19</span>線段樹與樹狀陣列</a>
 <a href="#ch20"><span class="nav-num">20</span>字串演算法<span class="count">11</span></a>
@@ -191,7 +191,7 @@ footer {
 <tr><td class="idx">10</td><td><a href="https://cses.fi/problemset/task/2422" target="_blank" rel="noopener">Multiplication Table</a></td><td>CSES</td><td><a class="sol" href="https://github.com/BeanSamuel/cpp_practice/blob/main/CSES/Additional_Problems_I/Multiplication_Table.cpp" target="_blank" rel="noopener">解答</a></td></tr>
 <tr><td class="idx">11</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=f607" target="_blank" rel="noopener">f607. 3. 切割費用</a></td><td>ZeroJudge</td><td><a class="sol" href="https://github.com/BeanSamuel/cpp_practice/blob/main/zerojudge/f607.cpp" target="_blank" rel="noopener">解答</a></td></tr>
 <tr><td class="idx">12</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=j125" target="_blank" rel="noopener">j125. 4. 蓋步道</a></td><td>ZeroJudge</td><td><a class="sol" href="https://github.com/BeanSamuel/cpp_practice/blob/main/zerojudge/j125.cpp" target="_blank" rel="noopener">解答</a></td></tr>
-<tr><td class="idx">13</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=o079" target="_blank" rel="noopener">o079. 4. 最佳選擇</a></td><td>ZeroJudge</td><td class="nosol">—</td></tr>
+<tr><td class="idx">13</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=o079" target="_blank" rel="noopener">o079. 4. 最佳選擇</a></td><td>ZeroJudge</td><td><a class="sol" href="https://github.com/BeanSamuel/cpp_practice/blob/main/zerojudge/o079.cpp" target="_blank" rel="noopener">解答</a></td></tr>
 <tr><td class="idx">14</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=o714" target="_blank" rel="noopener">o714. 4. 搭到終點</a></td><td>ZeroJudge</td><td><a class="sol" href="https://github.com/BeanSamuel/cpp_practice/blob/main/zerojudge/o714.cpp" target="_blank" rel="noopener">解答</a></td></tr></tbody></table></div></section>
 <section id="ch05"><h2><span class="ch-num">05</span>雙指針與滑動視窗<span class="folder">TwoPointers_SlidingWindow</span></h2><details class="points"><summary>教學重點</summary><ul><li><strong>對向雙指針</strong>：兩指針從兩端相向而行，每步淘汰一個元素——找配對，也能「從兩端確定答案」</li>
 <li><strong>同向雙指針（滑動視窗）</strong>：固定長度視窗的 $O(1)$ 增量更新；可變長度視窗的「單調性讓左指針不回頭」</li>
@@ -408,7 +408,17 @@ footer {
 <li>Kahn 演算法（BFS + 入度表）；DFS 三色標記為另一解法</li>
 <li>環偵測：完成數 &lt; N 即有環</li>
 <li>唯一化輸出：用最小堆取字典序最小拓撲序</li>
-<li><strong>DAG 上的 DP</strong>：拓撲序 = DP 的計算順序（max 求關鍵路徑、sum 求路線計數）</li></ul></details><p class="empty">此章節的練習題整理中，敬請期待。</p></section>
+<li><strong>DAG 上的 DP</strong>：拓撲序 = DP 的計算順序（max 求關鍵路徑、sum 求路線計數）</li></ul></details><div class="table-wrap"><table><thead><tr><th>#</th><th>題目</th><th>來源</th><th>解答</th></tr></thead><tbody><tr><td class="idx">1</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=f167" target="_blank" rel="noopener">f167. m4a1-社團 Club</a></td><td>ZeroJudge</td><td class="nosol">—</td></tr>
+<tr><td class="idx">2</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=b333" target="_blank" rel="noopener">b333. NOIP2013 4. 車站分級</a></td><td>ZeroJudge</td><td class="nosol">—</td></tr>
+<tr><td class="idx">3</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=k734" target="_blank" rel="noopener">k734. APCS 4. 開啟寶盒</a></td><td>ZeroJudge</td><td class="nosol">—</td></tr>
+<tr><td class="idx">4</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=l245" target="_blank" rel="noopener">l245. D. 汽車不再繞圈圈</a></td><td>ZeroJudge</td><td class="nosol">—</td></tr>
+<tr><td class="idx">5</td><td><a href="https://cses.fi/problemset/task/1679" target="_blank" rel="noopener">Course Schedule</a></td><td>CSES</td><td class="nosol">—</td></tr>
+<tr><td class="idx">6</td><td><a href="https://cses.fi/problemset/task/1757" target="_blank" rel="noopener">Course Schedule II</a></td><td>CSES</td><td class="nosol">—</td></tr>
+<tr><td class="idx">7</td><td><a href="https://cses.fi/problemset/task/1680" target="_blank" rel="noopener">Longest Flight Route</a></td><td>CSES</td><td class="nosol">—</td></tr>
+<tr><td class="idx">8</td><td><a href="https://cses.fi/problemset/task/1681" target="_blank" rel="noopener">Game Routes</a></td><td>CSES</td><td class="nosol">—</td></tr>
+<tr><td class="idx">9</td><td><a href="https://cses.fi/problemset/task/1202" target="_blank" rel="noopener">Investigation</a></td><td>CSES</td><td class="nosol">—</td></tr>
+<tr><td class="idx">10</td><td><a href="https://cses.fi/problemset/task/2138" target="_blank" rel="noopener">Reachable Nodes</a></td><td>CSES</td><td class="nosol">—</td></tr>
+<tr><td class="idx">11</td><td><a href="https://cses.fi/problemset/task/1756" target="_blank" rel="noopener">Acyclic Graph Edges</a></td><td>CSES</td><td class="nosol">—</td></tr></tbody></table></div></section>
 <section id="ch18"><h2><span class="ch-num">18</span>進階圖論<span class="folder">AdvancedGraph</span></h2><details class="points"><summary>教學重點</summary><ul><li><strong>DFS 樹與 low-link</strong>：$disc$（走訪時間戳）與 $low$（子樹能繞回的最早時間戳）是本章共同語言</li>
 <li><strong>Tarjan 強連通分量（SCC）</strong>：有向圖一次 DFS 求 SCC，$low[v]=disc[v]$ 即為分量的根；縮點後成 DAG</li>
 <li><strong>Tarjan 橋與割點</strong>：無向圖 low-link 的另一應用；用<strong>邊編號</strong>避開回頭路才能正確處理平行邊</li>
