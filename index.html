@@ -110,7 +110,7 @@ footer {
 <body>
 <header><div class="inner">
   <h1>Telearn 演算法練習題</h1>
-  <p>各章節的補充練習題清單與教學重點・共 248 題</p>
+  <p>各章節的補充練習題清單與教學重點・共 266 題</p>
 </div></header>
 <div class="layout">
 <nav>
@@ -132,7 +132,7 @@ footer {
 <a href="#ch16"><span class="nav-num">16</span>最小生成樹<span class="count">7</span></a>
 <a href="#ch17"><span class="nav-num">17</span>拓撲排序<span class="count">11</span></a>
 <a href="#ch18"><span class="nav-num">18</span>進階圖論<span class="count">8</span></a>
-<a href="#ch19"><span class="nav-num">19</span>線段樹與樹狀陣列</a>
+<a href="#ch19"><span class="nav-num">19</span>線段樹與樹狀陣列<span class="count">18</span></a>
 <a href="#ch20"><span class="nav-num">20</span>字串演算法<span class="count">11</span></a>
 <a href="#ch21"><span class="nav-num">21</span>數論與數學</a>
 <a href="#ch22"><span class="nav-num">22</span>位元運算<span class="count">10</span></a>
@@ -437,7 +437,24 @@ footer {
 <li><strong>值域 BIT ＋離散化</strong>：把「數逆序對」變成「值域上的前綴計數」</li>
 <li><strong>線段樹 (segment tree)</strong>：節點存可合併資訊（min／max／和／GCD…），區間查詢＋單點改</li>
 <li><strong>懶標記 (lazy propagation)</strong>：區間改暫存在高層節點，用到才下推——「區間改＋區間查」的通用框架</li>
-<li>選擇心法：<strong>查詢可前綴相減（和、計數）→ BIT；不可相減（min／max）或需區間改區間查 → 線段樹</strong></li></ul></details><p class="empty">此章節的練習題整理中，敬請期待。</p></section>
+<li>選擇心法：<strong>查詢可前綴相減（和、計數）→ BIT；不可相減（min／max）或需區間改區間查 → 線段樹</strong></li></ul></details><div class="table-wrap"><table><thead><tr><th>#</th><th>題目</th><th>來源</th><th>解答</th></tr></thead><tbody><tr><td class="idx">1</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=e406" target="_blank" rel="noopener">e406. Binary Indexed Tree 練習題</a></td><td>ZeroJudge</td><td class="nosol">—</td></tr>
+<tr><td class="idx">2</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=e409" target="_blank" rel="noopener">e409. Segment Tree 練習</a></td><td>ZeroJudge</td><td><a class="sol" href="https://github.com/BeanSamuel/cpp_practice/blob/main/templates/Segment_Tree_template.cpp" target="_blank" rel="noopener">解答</a></td></tr>
+<tr><td class="idx">3</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=e437" target="_blank" rel="noopener">e437. Segment Tree 練習2 + 區間修改</a></td><td>ZeroJudge</td><td class="nosol">—</td></tr>
+<tr><td class="idx">4</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=d799" target="_blank" rel="noopener">d799. 區間求和</a></td><td>ZeroJudge</td><td class="nosol">—</td></tr>
+<tr><td class="idx">5</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=d542" target="_blank" rel="noopener">d542. 10810 - Ultra-QuickSort</a></td><td>ZeroJudge</td><td class="nosol">—</td></tr>
+<tr><td class="idx">6</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=a457" target="_blank" rel="noopener">a457. TOI2010 第五題：餐廳評鑑</a></td><td>ZeroJudge</td><td class="nosol">—</td></tr>
+<tr><td class="idx">7</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=f315" target="_blank" rel="noopener">f315. 4. 低地距離</a></td><td>ZeroJudge</td><td class="nosol">—</td></tr>
+<tr><td class="idx">8</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=d796" target="_blank" rel="noopener">d796. 區域調查</a></td><td>ZeroJudge</td><td class="nosol">—</td></tr>
+<tr><td class="idx">9</td><td><a href="https://cses.fi/problemset/task/1648" target="_blank" rel="noopener">Dynamic Range Sum Queries</a></td><td>CSES</td><td><a class="sol" href="https://github.com/BeanSamuel/cpp_practice/blob/main/CSES/Range_Queries/Dynamic_Range_Sum_Queries.cpp" target="_blank" rel="noopener">解答</a></td></tr>
+<tr><td class="idx">10</td><td><a href="https://cses.fi/problemset/task/1649" target="_blank" rel="noopener">Dynamic Range Minimum Queries</a></td><td>CSES</td><td><a class="sol" href="https://github.com/BeanSamuel/cpp_practice/blob/main/CSES/Range_Queries/Dynamic_Range_Minimum_Queries.cpp" target="_blank" rel="noopener">解答</a></td></tr>
+<tr><td class="idx">11</td><td><a href="https://cses.fi/problemset/task/1651" target="_blank" rel="noopener">Range Update Queries</a></td><td>CSES</td><td><a class="sol" href="https://github.com/BeanSamuel/cpp_practice/blob/main/CSES/Range_Queries/Range_Update_Queries.cpp" target="_blank" rel="noopener">解答</a></td></tr>
+<tr><td class="idx">12</td><td><a href="https://cses.fi/problemset/task/1650" target="_blank" rel="noopener">Range Xor Queries</a></td><td>CSES</td><td><a class="sol" href="https://github.com/BeanSamuel/cpp_practice/blob/main/CSES/Range_Queries/Range_Xor_Queries.cpp" target="_blank" rel="noopener">解答</a></td></tr>
+<tr><td class="idx">13</td><td><a href="https://cses.fi/problemset/task/1652" target="_blank" rel="noopener">Forest Queries</a></td><td>CSES</td><td><a class="sol" href="https://github.com/BeanSamuel/cpp_practice/blob/main/CSES/Range_Queries/Forest_Queries.cpp" target="_blank" rel="noopener">解答</a></td></tr>
+<tr><td class="idx">14</td><td><a href="https://cses.fi/problemset/task/1143" target="_blank" rel="noopener">Hotel Queries</a></td><td>CSES</td><td class="nosol">—</td></tr>
+<tr><td class="idx">15</td><td><a href="https://cses.fi/problemset/task/1144" target="_blank" rel="noopener">Salary Queries</a></td><td>CSES</td><td class="nosol">—</td></tr>
+<tr><td class="idx">16</td><td><a href="https://cses.fi/problemset/task/1190" target="_blank" rel="noopener">Subarray Sum Queries</a></td><td>CSES</td><td class="nosol">—</td></tr>
+<tr><td class="idx">17</td><td><a href="https://cses.fi/problemset/task/1735" target="_blank" rel="noopener">Range Updates and Sums</a></td><td>CSES</td><td class="nosol">—</td></tr>
+<tr><td class="idx">18</td><td><a href="https://cses.fi/problemset/task/1739" target="_blank" rel="noopener">Forest Queries II</a></td><td>CSES</td><td><a class="sol" href="https://github.com/BeanSamuel/cpp_practice/blob/main/CSES/Range_Queries/Forest_Queries.cpp" target="_blank" rel="noopener">解答</a></td></tr></tbody></table></div></section>
 <section id="ch20"><h2><span class="ch-num">20</span>字串演算法<span class="folder">String</span></h2><details class="points"><summary>教學重點</summary><ul><li>Trie 字典樹：按前綴組織字串，查詢與字典大小無關</li>
 <li>KMP：fail 函數描述字串的<strong>自我重疊結構</strong>——匹配與週期都靠它</li>
 <li>Z-algorithm：每個位置與開頭的最長重合，「最右匹配區間」的繼承＋延伸</li>
