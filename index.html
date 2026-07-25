@@ -110,7 +110,7 @@ footer {
 <body>
 <header><div class="inner">
   <h1>Telearn 演算法練習題</h1>
-  <p>各章節的補充練習題清單與教學重點・共 278 題</p>
+  <p>各章節的補充練習題清單與教學重點・共 293 題</p>
 </div></header>
 <div class="layout">
 <nav>
@@ -134,7 +134,7 @@ footer {
 <a href="#ch18"><span class="nav-num">18</span>進階圖論<span class="count">8</span></a>
 <a href="#ch19"><span class="nav-num">19</span>線段樹與樹狀陣列<span class="count">18</span></a>
 <a href="#ch20"><span class="nav-num">20</span>字串演算法<span class="count">11</span></a>
-<a href="#ch21"><span class="nav-num">21</span>數論與數學</a>
+<a href="#ch21"><span class="nav-num">21</span>數論與數學<span class="count">15</span></a>
 <a href="#ch22"><span class="nav-num">22</span>位元運算<span class="count">10</span></a>
 <a href="#ch23"><span class="nav-num">23</span>計算幾何<span class="count">12</span></a>
 </nav>
@@ -471,9 +471,27 @@ footer {
 <tr><td class="idx">9</td><td><a href="https://cses.fi/problemset/task/1111" target="_blank" rel="noopener">Longest Palindrome</a></td><td>CSES</td><td class="nosol">—</td></tr>
 <tr><td class="idx">10</td><td><a href="https://cses.fi/problemset/task/2103" target="_blank" rel="noopener">Counting Patterns</a></td><td>CSES</td><td class="nosol">—</td></tr>
 <tr><td class="idx">11</td><td><a href="https://cses.fi/problemset/task/2420" target="_blank" rel="noopener">Palindrome Queries</a></td><td>CSES</td><td class="nosol">—</td></tr></tbody></table></div></section>
-<section id="ch21"><h2><span class="ch-num">21</span>數論與數學<span class="folder">NumberTheory_Math</span></h2><details class="points"><summary>教學重點</summary><ul><li>質數判定與埃氏篩</li>
-<li>GCD / LCM、擴展歐幾里得</li>
-<li>模運算、快速冪、模反元素</li></ul></details><p class="empty">此章節的練習題整理中，敬請期待。</p></section>
+<section id="ch21"><h2><span class="ch-num">21</span>數論與數學<span class="folder">NumberTheory_Math</span></h2><details class="points"><summary>教學重點</summary><ul><li><strong>輾轉相除法</strong>：$\gcd(a,b) = \gcd(b, a \bmod b)$，$O(\log)$；LCM 用 <code>a / g * b</code> 先除後乘防溢位</li>
+<li><strong>埃氏篩</strong>：$O(N \log \log N)$ 一次篩完，配前綴和 $O(1)$ 答區間質數個數——「重本預處理、查詢秒回」</li>
+<li><strong>模運算</strong>：加減乘每步取模；$(10^9+6)^2$ 逼近 64 位元上限，<code>long long</code> 是底線</li>
+<li><strong>快速冪</strong>：指數二進位分解，$O(\log t)$；是模逆元與費馬小定理的引擎</li>
+<li><strong>模反元素</strong>：$p$ 為質數時 $b^{-1} \equiv b^{p-2}$（費馬小定理）——「模世界的除法」；階乘表＋倒推逆階乘後 $\binom{n}{k}$ 查表 $O(1)$</li>
+<li><strong>擴展歐幾里得</strong>：求 $ax + by = \gcd(a,b)$ 的整數解；線性同餘 $at \equiv b \pmod m$ 有解 $\iff \gcd(a,m) \mid b$，解族間隔 $m/g$</li>
+<li>常見陷阱：先除後模會錯（除法要換逆元）、負數取模要拉回正（C++ 的 <code>%</code> 可為負）、乘積溢位</li></ul></details><div class="table-wrap"><table><thead><tr><th>#</th><th>題目</th><th>來源</th><th>解答</th></tr></thead><tbody><tr><td class="idx">1</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=a024" target="_blank" rel="noopener">a024. 最大公因數 (GCD)</a></td><td>ZeroJudge</td><td class="nosol">—</td></tr>
+<tr><td class="idx">2</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=c202" target="_blank" rel="noopener">c202. 最大公因數 (GCD)-TOI</a></td><td>ZeroJudge</td><td class="nosol">—</td></tr>
+<tr><td class="idx">3</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=d255" target="_blank" rel="noopener">d255. 11417 - GCD</a></td><td>ZeroJudge</td><td class="nosol">—</td></tr>
+<tr><td class="idx">4</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=b513" target="_blank" rel="noopener">b513. 判斷質數-商競103</a></td><td>ZeroJudge</td><td class="nosol">—</td></tr>
+<tr><td class="idx">5</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=d387" target="_blank" rel="noopener">d387. 10235 - Simply Emirp</a></td><td>ZeroJudge</td><td class="nosol">—</td></tr>
+<tr><td class="idx">6</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=a010" target="_blank" rel="noopener">a010. 因數分解</a></td><td>ZeroJudge</td><td class="nosol">—</td></tr>
+<tr><td class="idx">7</td><td><a href="https://cses.fi/problemset/task/1081" target="_blank" rel="noopener">Common Divisors</a></td><td>CSES</td><td><a class="sol" href="https://github.com/BeanSamuel/cpp_practice/blob/main/CSES/Mathematics/Common_Divisors.cpp" target="_blank" rel="noopener">解答</a></td></tr>
+<tr><td class="idx">8</td><td><a href="https://cses.fi/problemset/task/1713" target="_blank" rel="noopener">Counting Divisors</a></td><td>CSES</td><td><a class="sol" href="https://github.com/BeanSamuel/cpp_practice/blob/main/CSES/Mathematics/Counting_Divisors.cpp" target="_blank" rel="noopener">解答</a></td></tr>
+<tr><td class="idx">9</td><td><a href="https://cses.fi/problemset/task/2185" target="_blank" rel="noopener">Prime Multiples</a></td><td>CSES</td><td><a class="sol" href="https://github.com/BeanSamuel/cpp_practice/blob/main/CSES/Mathematics/Prime_Multiples.cpp" target="_blank" rel="noopener">解答</a></td></tr>
+<tr><td class="idx">10</td><td><a href="https://cses.fi/problemset/task/1095" target="_blank" rel="noopener">Exponentiation</a></td><td>CSES</td><td><a class="sol" href="https://github.com/BeanSamuel/cpp_practice/blob/main/CSES/Mathematics/Exponentiation.cpp" target="_blank" rel="noopener">解答</a></td></tr>
+<tr><td class="idx">11</td><td><a href="https://cses.fi/problemset/task/1712" target="_blank" rel="noopener">Exponentiation II</a></td><td>CSES</td><td><a class="sol" href="https://github.com/BeanSamuel/cpp_practice/blob/main/CSES/Mathematics/Exponentiation_II.cpp" target="_blank" rel="noopener">解答</a></td></tr>
+<tr><td class="idx">12</td><td><a href="https://cses.fi/problemset/task/1079" target="_blank" rel="noopener">Binomial Coefficients</a></td><td>CSES</td><td><a class="sol" href="https://github.com/BeanSamuel/cpp_practice/blob/main/CSES/Mathematics/Binomial_Coefficients.cpp" target="_blank" rel="noopener">解答</a></td></tr>
+<tr><td class="idx">13</td><td><a href="https://cses.fi/problemset/task/2164" target="_blank" rel="noopener">Josephus Queries</a></td><td>CSES</td><td class="nosol">—</td></tr>
+<tr><td class="idx">14</td><td><a href="https://leetcode.com/problems/count-primes/" target="_blank" rel="noopener">204. Count Primes</a></td><td>LeetCode</td><td class="nosol">—</td></tr>
+<tr><td class="idx">15</td><td><a href="https://leetcode.com/problems/water-and-jug-problem/" target="_blank" rel="noopener">365. Water and Jug Problem</a></td><td>LeetCode</td><td class="nosol">—</td></tr></tbody></table></div></section>
 <section id="ch22"><h2><span class="ch-num">22</span>位元運算<span class="folder">BitManipulation</span></h2><details class="points"><summary>教學重點</summary><ul><li><strong>XOR 三性質</strong>：$a \oplus a = 0$、$a \oplus 0 = a$、交換結合——「成對消去」是整章第一招</li>
 <li><strong>lowbit</strong>：<code>x &amp; (-x)</code> 取最低 1 位元、<code>x &amp; (x-1)</code> 抹最低 1 位元</li>
 <li><strong>mask 當集合</strong>：檢查 <code>(mask &gt;&gt; j) &amp; 1</code>、加入 <code>|</code>、移除 <code>&amp; ~</code>、補集 <code>^ FULL</code>、全集 <code>(1 &lt;&lt; M) - 1</code></li>
