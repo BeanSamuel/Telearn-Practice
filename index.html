@@ -347,12 +347,14 @@ footer {
 <tr><td class="idx">11</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=g598" target="_blank" rel="noopener">g598. 4. 真假子圖</a></td><td>Zerojudge</td><td class="nosol">—</td></tr>
 <tr><td class="idx">12</td><td><a href="https://cses.fi/problemset/task/1676" target="_blank" rel="noopener">Road Construction</a></td><td>CSES</td><td class="nosol">—</td></tr>
 <tr><td class="idx">13</td><td><a href="https://cses.fi/problemset/task/1677" target="_blank" rel="noopener">Network Breakdown</a></td><td>CSES</td><td class="nosol">—</td></tr></tbody></table></div></section>
-<section id="ch13"><h2><span class="ch-num">13</span>圖的走訪（BFS / DFS）<span class="folder">Graph_BFS_DFS</span></h2><details class="points"><summary>教學重點</summary><ul><li>鄰接串列表示法、DFS 與 BFS 的實作與差異（堆疊 vs 佇列）</li>
+<section id="ch13"><h2><span class="ch-num">13</span>圖的走訪（BFS / DFS）<span class="folder">Graph_BFS_DFS</span></h2><details class="points"><summary>教學重點</summary><ul><li>圖的兩種存法：鄰接矩陣 vs 鄰接串列（空間、查邊、列鄰居的取捨）</li>
+<li>DFS 與 BFS 是同一份骨架，只差容器（堆疊 vs 佇列）</li>
 <li>走訪順序與 visited 標記：每個節點只走一次，$O(V+E)$</li>
-<li>網格圖走訪與 Flood Fill（含「從邊界逆向出發」的思考方式）</li>
+<li>BFS 的層 = 無權圖最短距離（DFS 給不出這個保證）</li>
+<li>網格圖走訪與 Flood Fill 填色題：數連通塊／算面積／換顏色，以及「從邊界逆向出發」算補集</li>
 <li>多源 BFS：多個起點同時入隊，分層數 = 距離／時間</li>
-<li>圖染色與二分圖判定（奇環）</li>
-<li>隱式圖：把「狀態」當節點、即時產生鄰居做 BFS</li></ul></details><div class="table-wrap"><table><thead><tr><th>#</th><th>題目</th><th>來源</th><th>解答</th></tr></thead><tbody><tr><td class="idx">1</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=a290" target="_blank" rel="noopener">a290. 新手訓練系列 ~ 圖論</a></td><td>ZeroJudge</td><td><a class="sol" href="https://github.com/BeanSamuel/cpp_practice/blob/main/zerojudge/a290.cpp" target="_blank" rel="noopener">解答</a></td></tr>
+<li>二染色與二分圖判定：相鄰必異色，有奇環就染不成</li>
+<li>隱式圖：把「狀態」當節點、鄰居當場算出來再 BFS（例：+1／−1／×2 的最少操作次數）</li></ul></details><div class="table-wrap"><table><thead><tr><th>#</th><th>題目</th><th>來源</th><th>解答</th></tr></thead><tbody><tr><td class="idx">1</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=a290" target="_blank" rel="noopener">a290. 新手訓練系列 ~ 圖論</a></td><td>ZeroJudge</td><td><a class="sol" href="https://github.com/BeanSamuel/cpp_practice/blob/main/zerojudge/a290.cpp" target="_blank" rel="noopener">解答</a></td></tr>
 <tr><td class="idx">2</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=a445" target="_blank" rel="noopener">a445. 新手訓練系列 - 我的朋友很少</a></td><td>ZeroJudge</td><td><a class="sol" href="https://github.com/BeanSamuel/cpp_practice/blob/main/zerojudge/a445.cpp" target="_blank" rel="noopener">解答</a></td></tr>
 <tr><td class="idx">3</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=a982" target="_blank" rel="noopener">a982. 迷宮問題#1</a></td><td>ZeroJudge</td><td class="nosol">—</td></tr>
 <tr><td class="idx">4</td><td><a href="https://zerojudge.tw/ShowProblem?problemid=a597" target="_blank" rel="noopener">a597. 圖形著色</a></td><td>ZeroJudge</td><td class="nosol">—</td></tr>
